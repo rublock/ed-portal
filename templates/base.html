@@ -1,4 +1,5 @@
 {% load static %}
+
 <!doctype html>
 <html lang="ru">
 
@@ -7,7 +8,8 @@
   <meta charset="utf-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <!-- Bootstrap CSS -->
+
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
   <!-- ChartJS -->
@@ -15,18 +17,34 @@
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="{% static 'css/fontawesome.all.min.css' %}">
-  <title>Welcome to Braniac!</title>
+
+  <title>
+    {% block title %}
+    Welcome to Braniac!
+    {% endblock title %}
+  </title>
 </head>
 
 <body>
 
-{% include 'includes/main_menu.html' %}
+  {% include 'includes/main_menu.html' %}
 
   <div class="container-md">
-    {% block content %}{% endblock content %}
+
+    {% block content %}
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+    optio est esse? Veritatis laborum expedita
+    quibusdam numquam! Expedita amet nisi dolor similique autem, mollitia
+    ipsa et, natus vel explicabo
+    reprehenderit?
+
+    {% endblock content %}
+
   </div>
 
   <!-- Footer -->
+
   <div class="container-lg mt-auto">
     <hr>
     <div class="row justify-content-center">
@@ -51,7 +69,8 @@
           <li><a href="#">Положения &amp; Условия</a></li>
           <li><a href="#">Конфиденциальность &amp; Cookies</a></li>
           <li><a href="#">Документация по API</a></li>
-          <li><a href="doc_site.html">Документация по сайту</a></li>
+          <li><a href="{% url 'mainapp:doc_site' %}">Документация по сайту</a>
+          </li>
         </ul>
         </p>
       </div>
@@ -90,7 +109,12 @@
     </div>
   </div>
 
-<!-- JavaScript section -->
+  <!-- /Footer -->
+
+
+
+
+  <!-- JavaScript section -->
   <!-- Bootstrap -->
   <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
   <script src="{% static 'js/popper.min.js' %}"></script>
@@ -101,6 +125,8 @@
 
   <!-- FontAwesome -->
   <script src="{% static 'js/fontawesome.all.min.js' %}"></script>
+
+
 
 </body>
 
