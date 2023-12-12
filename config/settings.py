@@ -16,6 +16,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "markdownify.apps.MarkdownifyConfig",
+    "crispy_bootstrap4",
+    "crispy_forms",
     "social_django",
     "mainapp",
     "authapp",
@@ -133,3 +135,5 @@ AUTHENTICATION_BACKENDS = (
 
 SOCIAL_AUTH_GITHUB_KEY = "5f35f0da3b562ab89c05"
 SOCIAL_AUTH_GITHUB_SECRET = "ca4de1d80dafcb7ec4efdcfeab8447a5300999c1"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
