@@ -16,6 +16,7 @@ logger = logging.getLogger(__name__)
 
 class MainPageView(TemplateView):
     template_name = "mainapp/index.html"
+    logger.debug("MainPageView")
 
 
 class NewsListView(ListView):
@@ -23,7 +24,6 @@ class NewsListView(ListView):
     paginate_by = 5
 
     def get_queryset(self):
-        logger.debug("class NewsListView, def get_queryset log message")
         return super().get_queryset().filter(deleted=False)
 
 
