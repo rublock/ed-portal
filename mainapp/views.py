@@ -1,13 +1,14 @@
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
-from django.http import JsonResponse, FileResponse
 import logging
+
+from django.conf import settings
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
+from django.core.cache import cache
+from django.http import FileResponse, JsonResponse
 from django.shortcuts import get_object_or_404
 from django.template.loader import render_to_string
 from django.urls import reverse_lazy
-from django.views import View
-from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView
+from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView, View
 
-from config import settings
 from mainapp import forms as mainapp_forms
 from mainapp import models as mainapp_models
 
@@ -16,7 +17,6 @@ logger = logging.getLogger(__name__)
 
 class MainPageView(TemplateView):
     template_name = "mainapp/index.html"
-    logger.debug("MainPageView")
 
 
 class NewsListView(ListView):
@@ -64,6 +64,7 @@ class CoursesDetailView(TemplateView):
     template_name = "mainapp/courses_detail.html"
 
     def get_context_data(self, pk=None, **kwargs):
+        logger.debug("Yet another log message")
         context = super(CoursesDetailView, self).get_context_data(**kwargs)
         context["course_object"] = get_object_or_404(mainapp_models.Courses, pk=pk)
         context["lessons"] = mainapp_models.Lesson.objects.filter(course=context["course_object"])
@@ -75,9 +76,18 @@ class CoursesDetailView(TemplateView):
                 context["feedback_form"] = mainapp_forms.CourseFeedbackForm(
                     course=context["course_object"], user=self.request.user
                 )
-        context["feedback_list"] = mainapp_models.CourseFeedback.objects.filter(
-            course=context["course_object"]
-        ).order_by("-created", "-rating")[:5]
+
+        cached_feedback = cache.get(f"feedback_list_{pk}")
+        if not cached_feedback:
+            context["feedback_list"] = (
+                mainapp_models.CourseFeedback.objects.filter(course=context["course_object"])
+                .order_by("-created", "-rating")
+                .select_related()
+            )
+            cache.set(f"feedback_list_{pk}", context["feedback_list"], timeout=300)
+        else:
+            context["feedback_list"] = cached_feedback
+
         return context
 
 
@@ -106,8 +116,9 @@ class LogView(TemplateView):
         context = super(LogView, self).get_context_data(**kwargs)
         log_slice = []
         with open(settings.LOG_FILE, "r") as log_file:
-            lines = log_file.readlines()
-            for line in reversed(lines[-1000:]):
+            for i, line in enumerate(log_file):
+                if i == 1000:
+                    break
                 log_slice.insert(0, line)
             context["log"] = "".join(log_slice)
         return context
