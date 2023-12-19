@@ -26,3 +26,4 @@ typing_extensions==4.8.0
 urllib3==2.1.0
 webencodings==0.5.1
 django-debug-toolbar~=4.2.0
+celery~=5.3.6
