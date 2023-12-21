@@ -1,24 +1,15 @@
-import logging
-from typing import Dict, Union
-
 from celery import shared_task
-from django.conf import settings
-from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
 
-logger = logging.getLogger(__name__)
 
-
-@shared_task
-def send_feedback_mail(message_form: Dict[str, Union[int, str]]) -> None:
-    logger.info(f"Send message: '{message_form}'")
-    model_user = get_user_model()
-    user_obj = model_user.objects.get(pk=message_form["user_id"])
+@shared_task(bind=True)
+def send_feedback_mail(self, user_message, user_mail):
+    mail_subject = "Welcome on Board!"
     send_mail(
-        "TechSupport Help",
-        message_form["message"],
-        user_obj.email,
-        ["techsupport@braniac.com"],
+        subject=mail_subject,
+        message=user_message,
+        from_email='lpsys1@gmail.com',
+        recipient_list=[user_mail],
         fail_silently=False,
     )
-    return None
+    return "Done"

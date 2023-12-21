@@ -1,6 +1,7 @@
 import logging
 
 from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from django.core.cache import cache
 from django.contrib import messages
@@ -76,7 +77,7 @@ class CoursesDetailView(TemplateView):
         context["teachers"] = mainapp_models.CourseTeachers.objects.filter(course=context["course_object"])
         if not self.request.user.is_anonymous:
             if not mainapp_models.CourseFeedback.objects.filter(
-                course=context["course_object"], user=self.request.user
+                    course=context["course_object"], user=self.request.user
             ).count():
                 context["feedback_form"] = mainapp_forms.CourseFeedbackForm(
                     course=context["course_object"], user=self.request.user
@@ -122,20 +123,19 @@ class ContactsPageView(TemplateView):
                 cache.set(
                     f"mail_feedback_lock_{self.request.user.pk}",
                     "lock",
-                    timeout=300,
+                    timeout=3,
                 )
                 messages.add_message(self.request, messages.INFO, _("Message sended"))
-                mainapp_tasks.send_feedback_mail.delay(
-                    {
-                        "user_id": self.request.POST.get("user_id"),
-                        "message": self.request.POST.get("message"),
-                    }
-                )
+                pk = self.request.POST.get("user_id")
+                model = get_user_model()
+                user_email = model.objects.get(pk=pk).email
+                user_message = self.request.POST.get("message")
+                mainapp_tasks.send_feedback_mail.delay(user_message, user_email)
             else:
                 messages.add_message(
                     self.request,
                     messages.WARNING,
-                    _("You can send only one message per 5 minutes"),
+                    _("You can send only one message per 3 seconds"),
                 )
         return HttpResponseRedirect(reverse_lazy("mainapp:contacts"))
 
