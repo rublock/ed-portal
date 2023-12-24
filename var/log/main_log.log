@@ -1,0 +1,149 @@
+[2023-12-24 10:59:01,696] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-12-24 10:59:03,786] ERROR django.request (241) Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/contrib/sessions/backends/base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/debug_toolbar/panels/request.py", line 64, in generate_stats
+    (k, request.session.get(k)) for k in sorted(request.session.keys())
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/contrib/sessions/backends/base.py", line 123, in keys
+    return self._session.keys()
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/contrib/sessions/backends/base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/contrib/sessions/backends/db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: django_session
+[2023-12-24 10:59:03,788] ERROR django.server (212) "GET / HTTP/1.1" 500 157742
+[2023-12-24 10:59:04,070] ERROR django.request (241) Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/contrib/sessions/backends/base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/debug_toolbar/panels/request.py", line 64, in generate_stats
+    (k, request.session.get(k)) for k in sorted(request.session.keys())
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/contrib/sessions/backends/base.py", line 123, in keys
+    return self._session.keys()
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/contrib/sessions/backends/base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/contrib/sessions/backends/db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/contrib/sessions/backends/db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/mack/git/ed_portal/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: django_session
+[2023-12-24 10:59:04,071] ERROR django.server (212) "GET /favicon.ico HTTP/1.1" 500 156471
+[2023-12-24 10:59:35,882] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-12-24 10:59:37,299] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-12-24 10:59:37,371] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 21178
+[2023-12-24 10:59:37,842] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-24 10:59:37,843] WARNING django.server (212) "GET /favicon.ico HTTP/1.1" 404 13009
+[2023-12-24 10:59:38,808] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16930
+[2023-12-24 10:59:39,503] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 16229
+[2023-12-24 10:59:41,230] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16930
+[2023-12-24 11:00:47,335] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-12-24 11:00:52,211] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 20402
+[2023-12-24 11:00:55,188] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 20402
+[2023-12-24 11:00:55,570] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 21176
+[2023-12-24 11:00:57,622] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 16187
+[2023-12-24 11:00:59,572] INFO django.server (212) "POST /i18n/setlang/ HTTP/1.1" 302 0
+[2023-12-24 11:00:59,613] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 17379
+[2023-12-24 11:01:02,152] INFO django.server (212) "POST /i18n/setlang/ HTTP/1.1" 302 0
+[2023-12-24 11:01:02,175] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 16187
+[2023-12-24 11:01:03,624] INFO django.server (212) "POST /i18n/setlang/ HTTP/1.1" 302 0
+[2023-12-24 11:01:03,646] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 17334
+[2023-12-24 11:01:06,706] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 19588
+[2023-12-24 11:01:08,302] INFO django.server (212) "POST /i18n/setlang/ HTTP/1.1" 302 0
+[2023-12-24 11:01:08,325] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 16187
+[2023-12-24 11:01:12,558] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 20402
+[2023-12-24 11:01:14,196] INFO django.server (212) "GET /mainapp/news/?page=2 HTTP/1.1" 200 17743
+[2023-12-24 11:01:16,705] INFO django.server (212) "POST /i18n/setlang/ HTTP/1.1" 302 0
+[2023-12-24 11:01:16,729] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 17334
+[2023-12-24 11:01:21,212] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 19588
+[2023-12-24 11:01:23,440] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20362
