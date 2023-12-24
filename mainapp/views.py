@@ -1,18 +1,17 @@
 import logging
 
 from django.conf import settings
+from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from django.core.cache import cache
-from django.contrib import messages
 from django.http import FileResponse, JsonResponse
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.template.loader import render_to_string
 from django.urls import reverse_lazy
-from django.template.loader import render_to_string
-from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView, View
 from django.utils.translation import gettext_lazy as _
+from django.views.generic import CreateView, DeleteView, DetailView, ListView, TemplateView, UpdateView, View
 
 from mainapp import forms as mainapp_forms
 from mainapp import models as mainapp_models
@@ -77,7 +76,7 @@ class CoursesDetailView(TemplateView):
         context["teachers"] = mainapp_models.CourseTeachers.objects.filter(course=context["course_object"])
         if not self.request.user.is_anonymous:
             if not mainapp_models.CourseFeedback.objects.filter(
-                    course=context["course_object"], user=self.request.user
+                course=context["course_object"], user=self.request.user
             ).count():
                 context["feedback_form"] = mainapp_forms.CourseFeedbackForm(
                     course=context["course_object"], user=self.request.user

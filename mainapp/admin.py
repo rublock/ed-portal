@@ -1,10 +1,7 @@
 from django.contrib import admin
-from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 
 from mainapp import models as mainapp_models
-
-from authapp import models
 
 
 @admin.register(mainapp_models.Lesson)

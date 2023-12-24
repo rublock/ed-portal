@@ -1,16 +1,13 @@
-import os
-
 from django.contrib import messages
 from django.contrib.auth import get_user_model
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.views import LoginView, LogoutView
+from django.urls import reverse_lazy
 from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
-from django.views.generic import TemplateView, CreateView, UpdateView
-from django.http.response import HttpResponseRedirect
-from django.urls import reverse_lazy
+from django.views.generic import CreateView, UpdateView
 
-from authapp import models, forms
+from authapp import forms
 
 
 class CustomLoginView(LoginView):

@@ -106,6 +106,7 @@ class TestNewsPage(TestCase):
         news_obj.refresh_from_db()
         self.assertTrue(news_obj.deleted)
 
+
 from django.core import mail as django_mail
 
 from mainapp import tasks as mainapp_tasks
