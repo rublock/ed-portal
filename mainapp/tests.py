@@ -1,10 +1,12 @@
 from http import HTTPStatus
 
+from django.core import mail as django_mail
 from django.test import Client, TestCase
 from django.urls import reverse
 
 from authapp import models as authapp_models
 from mainapp import models as mainapp_models
+from mainapp import tasks as mainapp_tasks
 
 
 class TestNewsPage(TestCase):
@@ -107,11 +109,6 @@ class TestNewsPage(TestCase):
         self.assertTrue(news_obj.deleted)
 
 
-from django.core import mail as django_mail
-
-from mainapp import tasks as mainapp_tasks
-
-
 class TestTaskMailSend(TestCase):
     fixtures = ("authapp/fixtures/001_user_admin.json",)
 
@@ -121,3 +118,69 @@ class TestTaskMailSend(TestCase):
         user_obj = authapp_models.CustomUser.objects.first()
         mainapp_tasks.send_feedback_mail(message_text, user_obj.email)
         self.assertEqual(django_mail.outbox[0].body, message_text)
+
+
+from django.conf import settings
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.webdriver import WebDriver
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
+
+class TestNewsSelenium(StaticLiveServerTestCase):
+    fixtures = (
+        "authapp/fixtures/001_user_admin.json",
+        "mainapp/fixtures/001_news.json",
+    )
+
+    def setUp(self):
+        """
+        Функция setUp в тестовом классе используется для настройки начальных условий перед выполнением каждого тестового
+        метода в этом классе. В данном коде она создает экземпляр веб-драйвера Chrome, устанавливает неявное ожидание в
+        10 секунд, открывает страницу авторизации, вводит имя пользователя и пароль, и ждет, пока элемент с классом
+        "mt-auto" станет видимым. Это позволяет гарантировать, что перед запуском каждого теста будут выполнены
+        определенные предварительные действия.
+        """
+        super().setUp()
+        self.selenium = webdriver.Chrome()
+        self.selenium.implicitly_wait(10)
+        self.selenium.get(f"{self.live_server_url}{reverse('authapp:login')}")
+        self.selenium.find_element(By.ID, "id_username").send_keys("admin")
+        self.selenium.find_element(By.ID, "id_password").send_keys("admin")
+        self.selenium.find_element(By.CLASS_NAME, "loginButton").click()
+        WebDriverWait(self.selenium, 5).until(EC.visibility_of_element_located((By.CLASS_NAME, "mt-auto")))
+
+    def test_create_button_clickable(self):
+        """Тест кнопки создания новости"""
+        path_list = f"{self.live_server_url}{reverse('mainapp:news')}"
+        path_add = reverse("mainapp:news_create")
+        self.selenium.get(path_list)
+        button_create = WebDriverWait(self.selenium, 5).until(
+            EC.visibility_of_element_located((By.CSS_SELECTOR, f'[href="{path_add}"]'))
+        )
+        print("Trying to click button ...")
+        button_create.click()  # Test that button clickable
+        WebDriverWait(self.selenium, 5).until(EC.visibility_of_element_located((By.ID, "id_title")))
+        print("Button clickable!")
+
+    def test_pick_color(self):
+        """Тест цвета хедера, если не соответствует делем скриншот"""
+        path = f"{self.live_server_url}{reverse('mainapp:main_page')}"
+        self.selenium.get(path)
+        navbar_el = WebDriverWait(self.selenium, 5).until(EC.visibility_of_element_located((By.CLASS_NAME, "navbar")))
+        try:
+            self.assertEqual(
+                navbar_el.value_of_css_property("background-color"),
+                "rgba(255, 255, 255, 1)",
+            )
+        except AssertionError:
+            with open("var/screenshots/001_navbar_el_scrnsht.png", "wb") as outf:
+                outf.write(navbar_el.screenshot_as_png)
+            raise
+
+    def tearDown(self):
+        """Закрываем браузер"""
+        self.selenium.quit()
+        super().tearDown()

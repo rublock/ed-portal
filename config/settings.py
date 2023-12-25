@@ -102,7 +102,6 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# STATIC_ROOT = ''
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
@@ -172,7 +171,6 @@ CELERY_RESULT_SERIALIZER = "json"
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_BACKEND = "redis://localhost:6379"
 
-# SMTP SETTINGS
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_USE_TLS = True
 EMAIL_HOST = "smtp.gmail.com"
@@ -182,3 +180,5 @@ EMAIL_HOST_PASSWORD = "okvqqgnzccvttuak"
 DEFAULT_FROM_EMAIL = "lpsys1@gmail.com"
 
 LOCALE_PATHS = [BASE_DIR / "locale"]
+
+SELENIUM_DRIVER_PATH_FF = BASE_DIR / "var" / "selenium" / "chromedriver"

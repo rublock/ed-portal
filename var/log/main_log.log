@@ -147,3 +147,44 @@ django.db.utils.OperationalError: no such table: django_session
 [2023-12-24 11:01:16,729] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 17334
 [2023-12-24 11:01:21,212] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 19588
 [2023-12-24 11:01:23,440] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20362
+[2023-12-25 07:22:32,049] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:27:48,883] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:31:39,258] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:32:10,725] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:32:40,584] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:38:06,196] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:41:43,397] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:43:14,861] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:45:54,132] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:50:25,016] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:52:29,444] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:53:45,654] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:55:21,365] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:57:41,630] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 07:59:31,707] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 17:39:02,710] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-12-25 17:48:46,286] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 17:48:53,174] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 17:54:00,436] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 17:54:07,381] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 17:55:40,748] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 17:55:48,004] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 17:59:28,971] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 17:59:30,765] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:00:04,099] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-12-25 18:01:26,536] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-12-25 18:01:36,706] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:01:48,569] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:04:24,633] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-12-25 18:04:32,151] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:04:35,314] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:10:35,324] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:10:38,524] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:12:15,715] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:12:19,188] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:12:47,578] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:12:50,943] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:18:06,775] INFO django.utils.autoreload (266) /home/mack/git/ed_portal/mainapp/views.py changed, reloading.
+[2023-12-25 18:18:07,469] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-12-25 18:21:11,160] WARNING django.request (241) Not Found: /favicon.ico
+[2023-12-25 18:21:14,393] WARNING django.request (241) Not Found: /favicon.ico
