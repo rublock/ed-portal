@@ -20,14 +20,14 @@
         </li>
         <li
           class="nav-item {% if request.resolver_match.view_name == 'mainapp:courses' %}active{% endif %}">
-          <a class="nav-link" href="{% url 'mainapp:courses' %}">Курсы</a>
+          <a class="nav-link" href="{% url 'mainapp:courses' %}">{% translate "Courses" %}</a>
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="ddProfile"
             role="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
-            Профиль
+            {% translate "Profile" %}
           </a>
           <div class="dropdown-menu" aria-labelledby="ddProfile">
             <a class="dropdown-item"
@@ -54,7 +54,7 @@
         {% endif %}
         <li
           class="nav-item {% if request.resolver_match.view_name == 'mainapp:contacts' %}active{% endif %}">
-          <a class="nav-link" href="{% url 'mainapp:contacts' %}">Контакты</a>
+          <a class="nav-link" href="{% url 'mainapp:contacts' %}">{% translate "Contacts" %}</a>
         </li>
       </ul>
 
