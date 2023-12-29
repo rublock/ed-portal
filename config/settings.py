@@ -13,7 +13,7 @@ if DEBUG:
         "127.0.0.1",
     ]
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
