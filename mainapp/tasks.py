@@ -8,7 +8,7 @@ def send_feedback_mail(self, user_message, user_mail):
     send_mail(
         subject=mail_subject,
         message=user_message,
-        from_email='lpsys1@gmail.com',
+        from_email="lpsys1@gmail.com",
         recipient_list=[user_mail],
         fail_silently=False,
     )
