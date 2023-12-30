@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  django:
+    # папка с Django проектов где есть Dockerfile
+    build: ./app
+    # выполенение комманды в контейнере
+    command: python manage.py runserver 0.0.0.0:8000
+    # куда будут помещены данные из каталога app
+    volumes:
+      - ./app/:/usr/src/app/
+    # открываем порт 8000 внутри и снаружи
+    ports:
+      - "8000:8000"
+    # файл содержащий переменные для контейнера
+    env_file:
+      - ./.env

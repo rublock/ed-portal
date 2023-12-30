@@ -2,19 +2,21 @@ from pathlib import Path
 
 from django.utils.translation import gettext_lazy as _
 
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-z3f^1et$cs&5nd6p4r5lwn$dlj)b2wj*k+-jfg@*!bxa^_6p#%"
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
-DEBUG = True
+DEBUG = str(os.getenv('DEBUG'))
 
-if DEBUG:
-    INTERNAL_IPS = [
-        "192.168.1.4",
-        "127.0.0.1",
-    ]
+INTERNAL_IPS = str(os.getenv('INTERNAL_IPS')).split(" ")
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
+ALLOWED_HOSTS = str(os.getenv('DJANGO_ALLOWED_HOSTS')).split(" ")
+
+CSRF_TRUSTED_ORIGINS = str(os.getenv('CSRF_TRUSTED_ORIGINS')).split(" ")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -50,7 +52,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            "templates",
+            BASE_DIR / "templates",
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -157,8 +159,8 @@ LOGGING = {
 
 CACHES = {
     "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379",
+        'BACKEND': str(os.getenv('CACHES_BACKEND')),
+        'LOCATION': str(os.getenv('CACHES_LOCATION')),
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         },
