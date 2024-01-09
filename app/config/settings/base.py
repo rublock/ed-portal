@@ -6,17 +6,15 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-SECRET_KEY = str(os.getenv('SECRET_KEY'))
+SECRET_KEY = 'jw!v45^#vy3h&)5ll5-3q1a=y^3_p*3%kk7@g3uy=)j+q9gw!5'
 
-DEBUG = str(os.getenv('DEBUG'))
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
 
-INTERNAL_IPS = str(os.getenv('INTERNAL_IPS')).split(" ")
-
-ALLOWED_HOSTS = str(os.getenv('DJANGO_ALLOWED_HOSTS')).split(" ")
-
-CSRF_TRUSTED_ORIGINS = str(os.getenv('CSRF_TRUSTED_ORIGINS')).split(" ")
+ALLOWED_HOSTS = ['127.0.0.1']
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -71,13 +69,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "config.wsgi.application"
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -149,7 +140,7 @@ LOGGING = {
         "console": {"class": "logging.StreamHandler", "formatter": "console"},
     },
     "loggers": {
-        "django": {"level": "INFO", "handlers": ["file"]},
+        "django": {"level": "INFO", "handlers": ["file", "console"]},
         "mainapp": {
             "level": "DEBUG",
             "handlers": ["file"],
@@ -159,8 +150,8 @@ LOGGING = {
 
 CACHES = {
     "default": {
-        'BACKEND': str(os.getenv('CACHES_BACKEND')),
-        'LOCATION': str(os.getenv('CACHES_LOCATION')),
+        'BACKEND': "django_redis.cache.RedisCache",
+        'LOCATION': "redis://127.0.0.1:6379",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         },
