@@ -1,5 +1,5 @@
 #Взять официальный базовый образ Python с платформы Docker
-FROM python:3.12.0-alpine
+FROM python:3.10.12
 
 #Задать переменные среды
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -13,4 +13,4 @@ RUN pip install --upgrade pip
 COPY requirements.txt /code/
 RUN pip install -r requirements.txt
 
-COPY app /code/
+COPY . /code/

@@ -1,13 +1,9 @@
-version: '3.8'
-
 services:
   django:
     # Папка с Django проекта где есть Dockerfile
     build: .
     # Выполенение комманды в контейнере
-    command: python /code/app/manage.py runserver 0.0.0.0:8000
-#    command: ["./wait-for-it.sh", "db:5432", "--",
-#              "uwsgi", "--ini", "/code/config/uwsgi/uwsgi.ini"]
+    command: [ "./entrypoint_app.sh" ]
     # Политика перезапуска контейнера
     restart: always
     # Куда будут помещены данные из каталога app
@@ -15,14 +11,26 @@ services:
       - .:/code
     # Открываем порт 8000 внутри и снаружи
     ports:
-      - "8000:8000"
+      - 8000:8000
     # Переменные окружения
     environment:
       - DJANGO_SETTINGS_MODULE=config.settings.prod
-#      - POSTGRES_DB=postgres
-#      - POSTGRES_USER=postgres
-#      - POSTGRES_PASSWORD=postgres
-#    # От чего зависит сервис
-#    depends_on:
-#      - db
-#      - cache
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    # От чего зависит сервис
+    depends_on:
+      - db
+  db:
+    image: postgres:14.5
+    restart: always
+    # Каталог для выгрузки БД
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+volumes:
+  postgres_data:
