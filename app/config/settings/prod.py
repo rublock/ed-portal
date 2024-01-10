@@ -21,3 +21,5 @@ DATABASES = {
    }
 }
 
+REDIS_URL = 'redis://cache:6379'
+CACHES['default']['LOCATION'] = REDIS_URL

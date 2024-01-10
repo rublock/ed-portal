@@ -21,6 +21,7 @@ services:
     # От чего зависит сервис
     depends_on:
       - db
+      - cache
   db:
     image: postgres:14.5
     restart: always
@@ -31,6 +32,14 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+
+  cache:
+    image: redis:6.0.16
+    restart: always
+    volumes:
+      - ./data/cache/:/data
+
+
 
 volumes:
   postgres_data:
