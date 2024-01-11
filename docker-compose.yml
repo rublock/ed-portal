@@ -1,9 +1,11 @@
 services:
-  django:
+
+  # Django
+  web:
     # Папка с Django проекта где есть Dockerfile
     build: .
     # Выполенение комманды в контейнере
-    command: [ "./entrypoint_app.sh" ]
+    command: [ "./entrypoint.sh" ]
     # Политика перезапуска контейнера
     restart: always
     # Куда будут помещены данные из каталога app
@@ -11,7 +13,7 @@ services:
       - .:/code
     # Открываем порт 8000 внутри и снаружи
     ports:
-      - 8000:8000
+      - "8000:8000"
     # Переменные окружения
     environment:
       - DJANGO_SETTINGS_MODULE=config.settings.prod
@@ -22,6 +24,8 @@ services:
     depends_on:
       - db
       - cache
+
+  # Postgres
   db:
     image: postgres:14.5
     restart: always
@@ -33,13 +37,12 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
 
+  # Redis
   cache:
     image: redis:6.0.16
     restart: always
     volumes:
       - ./data/cache/:/data
-
-
 
 volumes:
   postgres_data:
