@@ -9,7 +9,8 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /usr/src/app
 
 # Установить зависимости
-RUN pip install --upgrade pip
+RUN apt update && \
+    pip install --upgrade pip
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
