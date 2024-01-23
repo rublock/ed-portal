@@ -6,11 +6,12 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Задать рабочий каталог
-WORKDIR /code
+WORKDIR /usr/src/app
 
 # Установить зависимости
 RUN pip install --upgrade pip
-COPY requirements.txt /code/
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY . /code/
+# Скопировать код в работчий каталог в контейнере
+COPY . .

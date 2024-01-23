@@ -1,48 +1,68 @@
+version: "3.8"
 services:
 
-  # Django
-  web:
-    # Папка с Django проекта где есть Dockerfile
+  django:
     build: .
-    # Выполенение комманды в контейнере
+    container_name: django_container
     command: [ "./entrypoint.sh" ]
-    # Политика перезапуска контейнера
     restart: always
-    # Куда будут помещены данные из каталога app
     volumes:
-      - .:/code
-    # Открываем порт 8000 внутри и снаружи
+      - .:/usr/src/app
     ports:
       - "8000:8000"
-    # Переменные окружения
     environment:
-      - DJANGO_SETTINGS_MODULE=config.settings.prod
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    # От чего зависит сервис
+      - DJANGO_SETTINGS_MODULE=config.settings.local
+      - CELERY_BROKER=redis://redis:6379/0
+      - CELERY_BACKEND=redis://redis:6379/0
     depends_on:
-      - db
-      - cache
+      - postgres
+      - redis
+    networks:
+      - outer_net
+      - inner_net
 
-  # Postgres
-  db:
+  postgres:
     image: postgres:14.5
+    container_name: postgres_container
     restart: always
-    # Каталог для выгрузки БД
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
+      - ./data/postgres:/var/lib/postgresql/data/
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+    networks:
+      - inner_net
 
-  # Redis
-  cache:
+  redis:
     image: redis:6.0.16
+    container_name: redis_container
     restart: always
-    volumes:
-      - ./data/cache/:/data
+    networks:
+      - outer_net
 
+  celery:
+    build: .
+    container_name: celery_container
+    command: celery -A config worker -l INFO
+    volumes:
+      - ./app:/usr/src/app
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.local
+    networks:
+      - outer_net
+    depends_on:
+      - django
+      - redis
+
+# Именные тома
 volumes:
-  postgres_data:
+  data:
+
+networks:
+  inner_net:
+    name: inner_net
+    driver: bridge
+  outer_net:
+    name: outer_net
+    driver: bridge

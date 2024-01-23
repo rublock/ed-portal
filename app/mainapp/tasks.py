@@ -4,7 +4,7 @@ from django.core.mail import send_mail
 
 @shared_task(bind=True)
 def send_feedback_mail(self, user_message, user_mail):
-    mail_subject = "Welcome on Board!"
+    mail_subject = "ed_portal support message"
     send_mail(
         subject=mail_subject,
         message=user_message,
