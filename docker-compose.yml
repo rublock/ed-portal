@@ -10,10 +10,8 @@ services:
       - .:/usr/src/app
     ports:
       - "8000:8000"
-    environment:
-      - DJANGO_SETTINGS_MODULE=config.settings.local
-      - CELERY_BROKER=redis://redis:6379/0
-      - CELERY_BACKEND=redis://redis:6379/0
+    env_file:
+      - .env
     depends_on:
       - postgres
       - redis
@@ -27,10 +25,8 @@ services:
     restart: always
     volumes:
       - ./data/postgres:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+    env_file:
+      - .env
     networks:
       - inner_net
 
@@ -47,17 +43,13 @@ services:
     command: celery -A config worker -l INFO
     volumes:
       - ./app:/usr/src/app
-    environment:
-      - DJANGO_SETTINGS_MODULE=config.settings.local
+    env_file:
+      - .env
     networks:
       - outer_net
     depends_on:
       - django
       - redis
-
-# Именные тома
-volumes:
-  data:
 
 networks:
   inner_net:

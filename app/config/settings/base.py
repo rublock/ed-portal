@@ -4,17 +4,12 @@ from django.utils.translation import gettext_lazy as _
 
 from dotenv import load_dotenv
 import os
+
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-SECRET_KEY = 'jw!v45^#vy3h&)5ll5-3q1a=y^3_p*3%kk7@g3uy=)j+q9gw!5'
-
-INTERNAL_IPS = [
-    '127.0.0.1',
-]
-
-ALLOWED_HOSTS = ['127.0.0.1']
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 INSTALLED_APPS = [
     "django.contrib.admin",
