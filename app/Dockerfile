@@ -6,13 +6,14 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Задать рабочий каталог
-WORKDIR /usr/src/app
+WORKDIR /code
 
 # Установить зависимости
 RUN apt update && \
-    pip install --upgrade pip
+    apt-get install -y build-essential
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
+CMD ["uwsgi", "--master", "--ini", "/config/uwsgi/uwsgi.ini"]
 
 # Скопировать код в работчий каталог в контейнере
 COPY . .

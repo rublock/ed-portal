@@ -2,14 +2,14 @@ version: "3.8"
 services:
 
   django:
-    build: .
+    build: ./app
     container_name: django_container
     command: [ "./entrypoint.sh" ]
     restart: always
     volumes:
-      - .:/usr/src/app
-    ports:
-      - "8000:8000"
+      - .:/code
+#    ports:
+#      - "8000:8000"
     env_file:
       - .env
     depends_on:
@@ -38,11 +38,11 @@ services:
       - outer_net
 
   celery:
-    build: .
+    build: ./app
     container_name: celery_container
     command: celery -A config worker -l INFO
     volumes:
-      - ./app:/usr/src/app
+      - ./app:/code
     env_file:
       - .env
     networks:
@@ -50,6 +50,18 @@ services:
     depends_on:
       - django
       - redis
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx_container
+    restart: always
+    volumes:
+      - ./app/config/nginx:/etc/nginx/conf.d
+      - .:/code
+    ports:
+      - "80:80"
+    depends_on:
+      - django
 
 networks:
   inner_net:

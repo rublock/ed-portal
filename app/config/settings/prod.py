@@ -1,4 +1,3 @@
-import os
 from .base import *
 
 DEBUG = False
@@ -7,7 +6,7 @@ ADMINS = [
     ('Mack', 'lpsys1@gmail.com'),
 ]
 
-ALLOWED_HOSTS = ['82.97.241.112']
+ALLOWED_HOSTS = ['82.97.241.112', '127.0.0.1']
 
 DATABASES = {
    'default': {
