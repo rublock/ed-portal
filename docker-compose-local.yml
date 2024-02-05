@@ -2,7 +2,7 @@ version: "3.8"
 services:
 
   django:
-    build: ./app
+    build: .
     container_name: django_container
     command: [ "./entrypoint.sh" ]
     restart: always
