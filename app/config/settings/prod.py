@@ -18,3 +18,9 @@ DATABASES = {
        'PORT': 5432,
    }
 }
+
+STATIC_URL = "/static/static/"
+MEDIA_URL = "/static/media/"
+
+STATIC_ROOT = "vol/web/static"
+MEDIA_ROOT = "vol/web/media"

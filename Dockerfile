@@ -14,7 +14,7 @@ WORKDIR /app
 EXPOSE 8000
 
 # Установка python, venv, зависимостей, регистарция пользователя,
-# драйвер postgres (до зависимостей)
+# драйвер postgres (до зависимостей), папки для статики с разрешениями
 RUN python -m venv /python && \
     /python/bin/pip install --upgrade pip && \
     apk add --update --no-cache postgresql-client && \
@@ -22,7 +22,11 @@ RUN python -m venv /python && \
         build-base postgresql-dev musl-dev linux-headers && \
     /python/bin/pip install -r /requirements.txt && \
     apk del .tmp-deps && \
-    adduser --disabled-password --no-create-home admin
+    adduser --disabled-password --no-create-home admin && \
+    mkdir -p /vol/web/static && \
+    mkdir -p /vol/web/media && \
+    chown -R admin:admin /vol && \
+    chmod -R 755 /vol
 
 # Путь к локальному виртуальному окружению
 ENV PATH="/python/bin:$PATH"

@@ -1,24 +1,26 @@
 version: "3.8"
-services:
 
+services:
   django:
-    build: .
-    container_name: django_container
-    command: [ "./entrypoint.sh" ]
-    restart: always
-    volumes:
-      - .:/code
+    container_name: django
+    build:
+      context: .
+    command: >
+      sh -c "python manage.py wait_for_db &&
+             python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
     ports:
-      - "8000:8000"
+      - 8000:8000
+    volumes:
+      - ./app:/app
     env_file:
       - .env
     depends_on:
       - postgres
-      - redis
 
   postgres:
     image: postgres:14.5
-    container_name: postgres_container
+    container_name: postgres
     restart: always
     volumes:
       - postgres-data:/var/lib/postgresql/data/
@@ -27,15 +29,16 @@ services:
 
   redis:
     image: redis:6.0.16
-    container_name: redis_container
+    container_name: redis
     restart: always
 
   celery:
-    build: ./app
-    container_name: celery_container
+    container_name: celery
+    build:
+      context: .
     command: celery -A config worker -l INFO
     volumes:
-      - ./app:/code
+      - ./app:/app
     env_file:
       - .env
     depends_on:
