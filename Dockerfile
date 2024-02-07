@@ -1,6 +1,5 @@
 # Взять официальный базовый образ Python с платформы Docker
 FROM python:alpine3.19
-LABEL maintainer="rublock"
 
 # Задать переменные среды
 ENV PYTHONUNBUFFERED 1
@@ -8,6 +7,7 @@ ENV PYTHONUNBUFFERED 1
 # Скопировать код в работчий каталог в образ
 COPY ./requirements.txt ./requirements.txt
 COPY ./app /app
+COPY ./scripts /scripts
 
 # Задать рабочий каталог
 WORKDIR /app
@@ -26,13 +26,13 @@ RUN python -m venv /python && \
     mkdir -p /vol/web/static && \
     mkdir -p /vol/web/media && \
     chown -R admin:admin /vol && \
-    chmod -R 755 /vol
+    chmod -R 755 /vol && \
+    chmod -R +x /scripts
 
-# Путь к локальному виртуальному окружению
-ENV PATH="/python/bin:$PATH"
+# Путь к локальному окружению
+ENV PATH="/scripts:/python/bin:$PATH"
 
 # Переключаемся на локального пользователя
 USER admin
 
-
-#CMD ["uwsgi", "--master", "--ini", "/config/uwsgi/uwsgi.ini"]
+CMD ["run.sh"]
