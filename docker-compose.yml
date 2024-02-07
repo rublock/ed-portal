@@ -1,19 +1,14 @@
-version: "3.8"
+version: "3.9"
 
 services:
   django:
     container_name: django
     build:
       context: .
-    command: >
-      sh -c "python manage.py wait_for_db &&
-             python manage.py migrate &&
-             python manage.py runserver 0.0.0.0:8000"
-    ports:
-      - 8000:8000
+    restart: always
     volumes:
-      - ./app:/app
-      - ./data/web:/vol/web
+      - static-data:/vol/web/static
+      - media-data:/vol/web/media
     env_file:
       - .env
     depends_on:
@@ -24,7 +19,7 @@ services:
     container_name: postgres
     restart: always
     volumes:
-      - postgres-data:/var/lib/postgresql/data/
+      - postgres-data:/var/lib/postgresql/data
     env_file:
       - .env
 
@@ -35,6 +30,7 @@ services:
 
   celery:
     container_name: celery
+    restart: always
     build:
       context: .
     command: celery -A config worker -l INFO
@@ -46,5 +42,20 @@ services:
       - django
       - redis
 
+  nginx:
+    build:
+      context: ./proxy
+    container_name: nginx
+    restart: always
+    depends_on:
+      - django
+    ports:
+      - 80:8000
+    volumes:
+      - static-data:/vol/web/static
+      - media-data:/vol/web/media
+
 volumes:
   postgres-data:
+  static-data:
+  media-data:

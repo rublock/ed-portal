@@ -1,9 +1,13 @@
 server {
     listen ${LISTEN_PORT};
 
-    location /static {
-        alias /vol/static;
+    location /static/ {
+        alias /vol/web/;
     }
+
+    location /media/ {
+        alias /vol/web/;
+   }
 
     location / {
         uwsgi_pass              ${APP_HOST}:${APP_PORT};
