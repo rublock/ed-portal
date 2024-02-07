@@ -17,9 +17,9 @@ EXPOSE 8000
 # драйвер postgres (до зависимостей)
 RUN python -m venv /python && \
     /python/bin/pip install --upgrade pip && \
-    apk add --update --no-cache postgres-client && \
+    apk add --update --no-cache postgresql-client && \
     apk add --update --no-cache --virtual .tmp-deps \
-        build-base postgres-dev musl-dev && \
+        build-base postgresql-dev musl-dev linux-headers && \
     /python/bin/pip install -r /requirements.txt && \
     apk del .tmp-deps && \
     adduser --disabled-password --no-create-home admin
