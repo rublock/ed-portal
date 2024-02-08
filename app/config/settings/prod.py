@@ -3,10 +3,10 @@ from .base import *
 DEBUG = False
 
 ADMINS = [
-    ('Mack', 'lpsys1@gmail.com'),
+    ('rublock', 'lpsys1@gmail.com'),
 ]
 
-ALLOWED_HOSTS = ['82.97.241.112', '127.0.0.1']
+ALLOWED_HOSTS = ['213.171.8.9',]
 
 DATABASES = {
    'default': {
