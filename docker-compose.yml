@@ -1,0 +1,61 @@
+version: "3.9"
+
+services:
+  django:
+    container_name: django
+    build:
+      context: .
+    restart: always
+    volumes:
+      - static-data:/vol/web/static
+      - media-data:/vol/web/media
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:14.5
+    container_name: postgres
+    restart: always
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    env_file:
+      - .env
+
+  redis:
+    image: redis:6.0.16
+    container_name: redis
+    restart: always
+
+  celery:
+    container_name: celery
+    restart: always
+    build:
+      context: .
+    command: celery -A config worker -l INFO
+    volumes:
+      - ./app:/app
+    env_file:
+      - .env
+    depends_on:
+      - django
+      - redis
+
+  nginx:
+    build:
+      context: ./proxy
+    container_name: nginx
+    restart: always
+    depends_on:
+      - django
+    ports:
+      - 80:8000
+    volumes:
+      - static-data:/vol/static
+      - media-data:/vol/media
+
+volumes:
+  postgres-data:
+  static-data:
+  media-data:
