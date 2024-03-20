@@ -9,6 +9,7 @@ services:
     volumes:
       - static-data:/vol/web/static
       - media-data:/vol/web/media
+      - ./app/var/log:/var/log
     env_file:
       - .env
     depends_on:
@@ -35,7 +36,7 @@ services:
       context: .
     command: celery -A config worker -l INFO
     volumes:
-      - ./app:/app
+      - ./app/var/log:/var/log
     env_file:
       - .env
     depends_on:

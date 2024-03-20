@@ -26,10 +26,15 @@ RUN python -m venv /python && \
     adduser --disabled-password --no-create-home admin && \
     mkdir -p /vol/web/static && \
     mkdir -p /vol/web/media && \
+    chown -R admin:admin /app && \
+    chmod -R 755 /app && \
+    chmod -R +x /app && \
     chown -R admin:admin /vol && \
     chmod -R 755 /vol && \
     chmod -R +x /scripts && \
-    chmod 755 /app/var/log/main_log.log
+    chown -R admin:admin /var && \
+    chmod -R 755 /var && \
+    chmod -R +x /var
 
 # Путь к локальному окружению
 ENV PATH="/scripts:/python/bin:$PATH"
