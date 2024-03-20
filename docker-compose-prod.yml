@@ -1,26 +1,38 @@
 version: "3.9"
 
 services:
-  django:
+  app:
     container_name: django
+    command: sh -c "sleep 99999"
     build:
       context: .
     restart: always
     volumes:
+      - ./app:/app
       - static-data:/vol/web/static
       - media-data:/vol/web/media
-      - ./app/var/log:/var/log
     env_file:
       - .env
-    depends_on:
-      - postgres
 
-  postgres:
+  proxy:
+    container_name: nginx
+    restart: always
+    build:
+      context: ./proxy
+    ports:
+      - 80:8000
+    volumes:
+      - static-data:/vol/static
+      - media-data:/vol/web/media
+    depends_on:
+      - app
+
+  db:
     image: postgres:14.5
     container_name: postgres
     restart: always
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - ./data/database:/var/lib/postgresql/data
     env_file:
       - .env
 
@@ -36,27 +48,13 @@ services:
       context: .
     command: celery -A config worker -l INFO
     volumes:
-      - ./app/var/log:/var/log
+      - ./app:/app
     env_file:
       - .env
     depends_on:
-      - django
+      - app
       - redis
 
-  nginx:
-    build:
-      context: ./proxy
-    container_name: nginx
-    restart: always
-    depends_on:
-      - django
-    ports:
-      - 80:8000
-    volumes:
-      - static-data:/vol/static
-      - media-data:/vol/media
-
 volumes:
-  postgres-data:
   static-data:
   media-data:

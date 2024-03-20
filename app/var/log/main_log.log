@@ -1,0 +1,221 @@
+[2024-03-20 16:35:55,565] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-20 16:36:05,021] INFO django.server (212) "GET / HTTP/1.1" 200 12105
+[2024-03-20 16:36:12,232] ERROR django.request (241) Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "/python/lib/python3.10/site-packages/django_redis/cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+  File "/python/lib/python3.10/site-packages/django_redis/cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+  File "/python/lib/python3.10/site-packages/django_redis/client/default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/python/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/python/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/python/lib/python3.10/site-packages/django/utils/decorators.py", line 126, in _wrapper_view
+    result = middleware.process_request(request)
+  File "/python/lib/python3.10/site-packages/django/middleware/cache.py", line 158, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+  File "/python/lib/python3.10/site-packages/django/utils/cache.py", line 391, in get_cache_key
+    headerlist = cache.get(cache_key)
+  File "/python/lib/python3.10/site-packages/django_redis/cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+  File "/python/lib/python3.10/site-packages/django_redis/cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "/python/lib/python3.10/site-packages/django_redis/client/default.py", line 258, in get
+    value = client.get(key)
+  File "/python/lib/python3.10/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+  File "/python/lib/python3.10/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/python/lib/python3.10/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/python/lib/python3.10/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+[2024-03-20 16:36:12,235] ERROR django.server (212) "GET /courses/ HTTP/1.1" 500 111010
+[2024-03-20 16:36:12,463] WARNING django.request (241) Not Found: /favicon.ico
+[2024-03-20 16:36:12,464] WARNING django.server (212) "GET /favicon.ico HTTP/1.1" 404 5008
+[2024-03-20 16:36:15,470] INFO django.server (212) "GET /news/ HTTP/1.1" 200 7975
+[2024-03-20 16:36:18,885] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 10251
+[2024-03-20 16:36:23,015] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 10348
+[2024-03-20 16:36:27,158] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 10445
+[2024-03-20 16:36:28,042] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 10542
+[2024-03-20 16:36:28,428] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 10639
+[2024-03-20 16:36:28,594] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 10736
+[2024-03-20 16:36:28,869] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 10833
+[2024-03-20 16:36:29,157] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 10930
+[2024-03-20 16:36:29,454] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 11027
+[2024-03-20 16:36:29,611] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 11124
+[2024-03-20 16:36:29,900] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 11221
+[2024-03-20 16:36:30,182] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 11318
+[2024-03-20 16:36:30,474] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 11415
+[2024-03-20 16:36:31,498] INFO django.server (212) "GET / HTTP/1.1" 200 12105
+[2024-03-20 16:40:29,431] INFO django.utils.autoreload (266) /app/config/settings.py changed, reloading.
+[2024-03-20 16:40:30,334] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-20 16:49:03,574] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-20 16:49:18,599] INFO django.server (212) "GET / HTTP/1.1" 200 11143
+[2024-03-20 16:49:20,945] INFO django.server (212) "GET /news/ HTTP/1.1" 200 6890
+[2024-03-20 16:49:25,552] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 7998
+[2024-03-20 16:49:26,637] ERROR django.request (241) Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "/python/lib/python3.10/site-packages/django_redis/cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+  File "/python/lib/python3.10/site-packages/django_redis/cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+  File "/python/lib/python3.10/site-packages/django_redis/client/default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/python/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/python/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/python/lib/python3.10/site-packages/django/utils/decorators.py", line 126, in _wrapper_view
+    result = middleware.process_request(request)
+  File "/python/lib/python3.10/site-packages/django/middleware/cache.py", line 158, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+  File "/python/lib/python3.10/site-packages/django/utils/cache.py", line 391, in get_cache_key
+    headerlist = cache.get(cache_key)
+  File "/python/lib/python3.10/site-packages/django_redis/cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+  File "/python/lib/python3.10/site-packages/django_redis/cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "/python/lib/python3.10/site-packages/django_redis/client/default.py", line 258, in get
+    value = client.get(key)
+  File "/python/lib/python3.10/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name)
+  File "/python/lib/python3.10/site-packages/redis/client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/python/lib/python3.10/site-packages/redis/connection.py", line 1086, in get_connection
+    connection.connect()
+  File "/python/lib/python3.10/site-packages/redis/connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error -3 connecting to redis:6379. Temporary failure in name resolution.
+[2024-03-20 16:49:26,640] ERROR django.server (212) "GET /courses/ HTTP/1.1" 500 111125
+[2024-03-20 16:49:29,836] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 12480
+[2024-03-20 16:50:03,026] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2024-03-20 16:50:03,065] INFO django.server (212) "GET / HTTP/1.1" 200 12967
+[2024-03-20 16:50:06,612] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 15400
+[2024-03-20 16:50:08,671] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 15497
+[2024-03-20 16:50:29,509] INFO django.server (212) "GET /contacts/ HTTP/1.1" 200 12960
+[2024-03-20 16:50:31,369] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 15691
+[2024-03-20 16:55:51,781] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-20 16:57:30,190] INFO django.server (212) "GET / HTTP/1.1" 200 12238
+[2024-03-20 16:57:30,333] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 1807
+[2024-03-20 16:57:30,337] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 1852
+[2024-03-20 16:57:30,338] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 1834
+[2024-03-20 16:57:30,347] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 1822
+[2024-03-20 16:57:30,349] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 1822
+[2024-03-20 16:57:30,545] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 1822
+[2024-03-20 16:57:30,565] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 1822
+[2024-03-20 16:57:30,577] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 1837
+[2024-03-20 16:57:30,589] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 1816
+[2024-03-20 16:57:30,591] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 1828
+[2024-03-20 16:57:30,591] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 1819
+[2024-03-20 16:57:30,603] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 1816
+[2024-03-20 16:57:30,662] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 1846
+[2024-03-20 16:57:30,664] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 1816
+[2024-03-20 16:57:30,671] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 1819
+[2024-03-20 16:57:30,677] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 1816
+[2024-03-20 16:57:30,678] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 1819
+[2024-03-20 16:57:30,678] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 1819
+[2024-03-20 16:57:30,741] WARNING django.server (212) "GET /static/static/img/favicon.ico HTTP/1.1" 404 1816
+[2024-03-20 17:04:11,157] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-20 17:04:16,815] INFO django.server (212) "GET / HTTP/1.1" 200 12238
+[2024-03-20 17:04:16,970] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 1822
+[2024-03-20 17:04:16,993] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 1807
+[2024-03-20 17:04:16,995] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 1852
+[2024-03-20 17:04:16,999] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 1834
+[2024-03-20 17:04:17,002] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 1822
+[2024-03-20 17:04:17,174] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 1822
+[2024-03-20 17:04:17,205] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 1837
+[2024-03-20 17:04:17,208] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 1822
+[2024-03-20 17:04:17,217] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 1819
+[2024-03-20 17:04:17,218] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 1816
+[2024-03-20 17:04:17,223] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 1828
+[2024-03-20 17:04:17,225] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 1816
+[2024-03-20 17:04:17,243] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 1846
+[2024-03-20 17:04:17,246] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 1816
+[2024-03-20 17:04:17,263] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 1816
+[2024-03-20 17:04:17,273] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 1819
+[2024-03-20 17:04:17,283] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 1819
+[2024-03-20 17:04:17,286] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 1819
+[2024-03-20 17:04:18,775] INFO django.server (212) "GET /courses/ HTTP/1.1" 200 6690
+[2024-03-20 17:04:18,953] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 1834
+[2024-03-20 17:04:18,993] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 1852
+[2024-03-20 17:04:18,999] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 1807
+[2024-03-20 17:04:19,001] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 1837
+[2024-03-20 17:04:19,006] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 1822
+[2024-03-20 17:04:19,038] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 1828
+[2024-03-20 17:04:19,059] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 1816
+[2024-03-20 17:04:19,059] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 1819
+[2024-03-20 17:04:19,066] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 1846
+[2024-03-20 17:04:22,321] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 21948
+[2024-03-20 17:04:22,516] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 1852
+[2024-03-20 17:04:22,524] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 1822
+[2024-03-20 17:04:22,527] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 1834
+[2024-03-20 17:04:22,532] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 1837
+[2024-03-20 17:04:22,536] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 1807
+[2024-03-20 17:04:22,585] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 1819
+[2024-03-20 17:04:22,616] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 1828
+[2024-03-20 17:04:22,624] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 1846
+[2024-03-20 17:04:22,627] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 1816
+[2024-03-20 17:04:26,888] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 1834
+[2024-03-20 17:04:26,939] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 1822
+[2024-03-20 17:04:26,949] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 1852
+[2024-03-20 17:04:26,963] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 1807
+[2024-03-20 17:04:26,976] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 1837
+[2024-03-20 17:04:26,991] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 1819
+[2024-03-20 17:04:27,034] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 1828
+[2024-03-20 17:04:27,058] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 1846
+[2024-03-20 17:04:27,064] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 1816
+[2024-03-20 17:04:28,779] INFO django.server (212) "GET /news/ HTTP/1.1" 200 8045
+[2024-03-20 17:04:28,910] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 1852
+[2024-03-20 17:04:28,953] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 1837
+[2024-03-20 17:04:28,953] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 1807
+[2024-03-20 17:04:28,959] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 1834
+[2024-03-20 17:04:28,971] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 1822
+[2024-03-20 17:04:28,982] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 1819
+[2024-03-20 17:04:28,991] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 1828
+[2024-03-20 17:04:29,018] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 1816
+[2024-03-20 17:04:29,021] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 1846
+[2024-03-20 17:04:29,651] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 1834
+[2024-03-20 17:04:29,687] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 1822
+[2024-03-20 17:04:29,714] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 1852
+[2024-03-20 17:04:29,729] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 1807
+[2024-03-20 17:04:29,736] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 1837
+[2024-03-20 17:04:29,743] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 1819
+[2024-03-20 17:04:29,748] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 1828
+[2024-03-20 17:04:29,750] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 1816
+[2024-03-20 17:04:29,815] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 1846
+[2024-03-20 17:04:31,182] INFO django.server (212) "GET /authapp/profile_edit/1/ HTTP/1.1" 200 9124
+[2024-03-20 17:04:31,347] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 1822
+[2024-03-20 17:04:31,348] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 1852
+[2024-03-20 17:04:31,363] WARNING django.request (241) Not Found: /static/media/avatar_default.svg
+[2024-03-20 17:04:31,364] WARNING django.server (212) "GET /static/media/avatar_default.svg HTTP/1.1" 404 5148
+[2024-03-20 17:04:31,365] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 1834
+[2024-03-20 17:04:31,370] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 1807
+[2024-03-20 17:04:31,382] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 1837
+[2024-03-20 17:04:31,399] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 1819
+[2024-03-20 17:04:31,420] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 1828
+[2024-03-20 17:04:31,428] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 1816
+[2024-03-20 17:04:31,436] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 1846
+[2024-03-20 17:04:34,928] INFO django.server (212) "GET /contacts/ HTTP/1.1" 200 13030
+[2024-03-20 17:04:35,137] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 1834
+[2024-03-20 17:04:35,159] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 1822
+[2024-03-20 17:04:35,180] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 1807
+[2024-03-20 17:04:35,187] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 1852
+[2024-03-20 17:04:35,190] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 1837
+[2024-03-20 17:04:35,190] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 1819
+[2024-03-20 17:04:35,197] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 1828
+[2024-03-20 17:04:35,259] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 1816
+[2024-03-20 17:04:35,272] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 1846
