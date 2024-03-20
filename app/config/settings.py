@@ -109,6 +109,11 @@ DATABASES = {
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    "/vol/web/static/",
+]
+
 STATIC_ROOT = '/vol/web/static/'
 
 LANGUAGE_CODE = "en-us"
