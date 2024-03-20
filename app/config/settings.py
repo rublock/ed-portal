@@ -107,10 +107,8 @@ DATABASES = {
    }
 }
 
-STATIC_URL = '/static/static/'
-MEDIA_URL = '/static/media/'
+STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/vol/web/media/'
 STATIC_ROOT = '/vol/web/static/'
 
 LANGUAGE_CODE = "en-us"
