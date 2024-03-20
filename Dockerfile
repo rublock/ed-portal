@@ -28,7 +28,8 @@ RUN python -m venv /python && \
     mkdir -p /vol/web/media && \
     chown -R admin:admin /vol && \
     chmod -R 755 /vol && \
-    chmod -R +x /scripts
+    chmod -R +x /scripts && \
+    chmod 755 /app/var/log/main_log.log
 
 # Путь к локальному окружению
 ENV PATH="/scripts:/python/bin:$PATH"
