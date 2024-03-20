@@ -3,7 +3,6 @@ version: "3.9"
 services:
   app:
     container_name: django
-    command: sh -c "sleep 99999"
     build:
       context: .
     restart: always
