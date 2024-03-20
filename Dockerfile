@@ -26,4 +26,6 @@ ENV PATH="/scripts:/python/bin:$PATH"
 
 USER admin
 
+COPY ./app/static /vol/web/static
+
 CMD ["run.sh"]

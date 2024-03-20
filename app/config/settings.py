@@ -108,13 +108,10 @@ DATABASES = {
 }
 
 STATIC_URL = '/static/static/'
+MEDIA_URL = '/static/media/'
 
-if DEBUG:
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'static')
-    ]
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = '/vol/web/media/'
+STATIC_ROOT = '/vol/web/static/'
 
 LANGUAGE_CODE = "en-us"
 LANGUAGES = (
