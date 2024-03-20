@@ -109,12 +109,12 @@ DATABASES = {
 
 STATIC_URL = '/static/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    "/vol/web/static/",
-]
-
-STATIC_ROOT = '/vol/web/static/'
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static')
+    ]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LANGUAGE_CODE = "en-us"
 LANGUAGES = (
