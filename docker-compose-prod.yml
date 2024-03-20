@@ -8,8 +8,7 @@ services:
     restart: always
     volumes:
       - ./app:/app
-      - static-data:/vol/web/static
-      - media-data:/vol/web/media
+      - static-data:/vol/web
     env_file:
       - .env
 
@@ -22,7 +21,6 @@ services:
       - 80:8000
     volumes:
       - static-data:/vol/static
-      - media-data:/vol/web/media
     depends_on:
       - app
 
