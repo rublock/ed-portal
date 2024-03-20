@@ -13,6 +13,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = bool(int(os.environ.get('DEBUG', 0)))
 
+CSRF_TRUSTED_ORIGINS = ['http://188.225.37.37']
+
 ALLOWED_HOSTS = []
 ALLOWED_HOSTS.extend(
     filter(
