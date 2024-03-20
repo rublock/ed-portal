@@ -4,6 +4,7 @@ ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /requirements.txt
 COPY ./app /app
+COPY ./app/static /vol/web/static
 COPY ./scripts /scripts
 
 WORKDIR /app
@@ -25,7 +26,5 @@ RUN python -m venv /python && \
 ENV PATH="/scripts:/python/bin:$PATH"
 
 USER admin
-
-COPY ./app/static /vol/web/static
 
 CMD ["run.sh"]
