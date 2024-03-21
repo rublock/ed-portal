@@ -39,7 +39,7 @@ class NewsCreateView(PermissionRequiredMixin, CreateView):
     permission_required = ("mainapp.add_news",)
 
     def form_valid(self, form):
-        logger.info(f"New news created: {form.instance}")
+        logger.debug(f"New news created: {form.instance}")
         return super().form_valid(form)
 
 class NewsDetailView(DetailView):
