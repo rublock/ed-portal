@@ -47,9 +47,8 @@ class RegisterView(CreateView):
     success_url = reverse_lazy("mainapp:main_page")
 
     def form_valid(self, form):
-        response = super().form_valid(form)
         logger.info(f"New user registered: {form.instance}")
-        return response
+        return super().form_valid(form)
 
 
 class ProfileEditView(UserPassesTestMixin, UpdateView):
