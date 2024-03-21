@@ -38,6 +38,9 @@ class NewsCreateView(PermissionRequiredMixin, CreateView):
     success_url = reverse_lazy("mainapp:news")
     permission_required = ("mainapp.add_news",)
 
+    def form_valid(self, form):
+        logger.info(f"New news created: {form.instance}")
+        return super().form_valid(form)
 
 class NewsDetailView(DetailView):
     model = mainapp_models.News
