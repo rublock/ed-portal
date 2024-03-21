@@ -165,6 +165,10 @@ LOGGING = {
             "level": "DEBUG",
             "handlers": ["file"],
         },
+        "authapp": {
+            "level": "DEBUG",
+            "handlers": ["file"],
+        },
     },
 }
 

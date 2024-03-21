@@ -38,6 +38,9 @@ class NewsCreateView(PermissionRequiredMixin, CreateView):
     success_url = reverse_lazy("mainapp:news")
     permission_required = ("mainapp.add_news",)
 
+    def form_valid(self, form):
+        logger.info(f"New news created: {form.instance}")
+        return super().form_valid(form)
 
 class NewsDetailView(DetailView):
     model = mainapp_models.News
@@ -69,7 +72,6 @@ class CoursesDetailView(TemplateView):
     template_name = "mainapp/courses_detail.html"
 
     def get_context_data(self, pk=None, **kwargs):
-        logger.debug("Yet another log message")
         context = super(CoursesDetailView, self).get_context_data(**kwargs)
         context["course_object"] = get_object_or_404(mainapp_models.Courses, pk=pk)
         context["lessons"] = mainapp_models.Lesson.objects.filter(course=context["course_object"])
@@ -127,9 +129,8 @@ class ContactsPageView(TemplateView):
                 messages.add_message(self.request, messages.INFO, _("Message sended"))
                 pk = self.request.POST.get("user_id")
                 model = get_user_model()
-                user_email = model.objects.get(pk=pk).email
                 user_message = self.request.POST.get("message")
-                mainapp_tasks.send_feedback_mail.delay(user_message, user_email)
+                mainapp_tasks.send_feedback_mail.delay(user_message)
             else:
                 messages.add_message(
                     self.request,

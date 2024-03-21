@@ -1,3 +1,5 @@
+import logging
+
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import UserPassesTestMixin
@@ -8,6 +10,8 @@ from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, UpdateView
 
 from authapp import forms
+
+logger = logging.getLogger(__name__)
 
 
 class CustomLoginView(LoginView):
@@ -41,6 +45,14 @@ class RegisterView(CreateView):
     model = get_user_model()
     form_class = forms.CustomUserCreationForm
     success_url = reverse_lazy("mainapp:main_page")
+
+    def form_valid(self, form):
+        logger.info("User registration form submitted successfully")
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        logger.error("Error in user registration form submission")
+        return super().form_invalid(form)
 
 
 class ProfileEditView(UserPassesTestMixin, UpdateView):
