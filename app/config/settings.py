@@ -173,12 +173,10 @@ LOGGING = {
     },
 }
 
-CACHES_LOCATION = os.environ.get('CACHES_LOCATION')
-
 CACHES = {
     "default": {
         'BACKEND': "django_redis.cache.RedisCache",
-        'LOCATION': CACHES_LOCATION,
+        'LOCATION': 'redis://redis:6379',
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         },
@@ -198,11 +196,8 @@ LOCALE_PATHS = [BASE_DIR / "locale"]
 
 SELENIUM_DRIVER_PATH_FF = BASE_DIR / "var" / "selenium" / "chromedriver"
 
-CELERY_BROKER_URL = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
-CELERY_RESULT_BACKEND = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
+CELERY_BROKER_URL = "redis://redis:6379/0"
+CELERY_RESULT_BACKEND = "redis://redis:6379/0"
 CELERY_ACCEPT_CONTENT = {"application/json"}
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TASK_SERIALIZER = "json"
-
-REDIS_URL = 'redis://redis:6379'
-CACHES['default']['LOCATION'] = REDIS_URL
