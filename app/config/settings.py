@@ -23,9 +23,10 @@ ALLOWED_HOSTS.extend(
     )
 )
 
-INTERNAL_IPS = [
-    '127.0.0.1',
-]
+if DEBUG:
+    INTERNAL_IPS = [
+        '127.0.0.1',
+    ]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -172,10 +173,12 @@ LOGGING = {
     },
 }
 
+CACHES_LOCATION = os.environ.get('CACHES_LOCATION')
+
 CACHES = {
     "default": {
         'BACKEND': "django_redis.cache.RedisCache",
-        'LOCATION': "redis://127.0.0.1:6379",
+        'LOCATION': CACHES_LOCATION,
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         },
@@ -200,7 +203,6 @@ CELERY_RESULT_BACKEND = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
 CELERY_ACCEPT_CONTENT = {"application/json"}
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TASK_SERIALIZER = "json"
-CELERY_BACKEND_URL = os.environ.get('CELERY_BACKEND_URL')
 
 REDIS_URL = 'redis://redis:6379'
 CACHES['default']['LOCATION'] = REDIS_URL
