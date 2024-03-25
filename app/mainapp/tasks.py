@@ -13,8 +13,8 @@ def send_feedback_mail(self, user_message):
     send_mail(
         subject=mail_subject,
         message=user_message,
-        from_email="lpsys1@gmail.com",
-        recipient_list=['lpsys1@gmail.com'],
+        from_email="hypermail@yandex.ru",
+        recipient_list=['mack55@mail.ru'],
         fail_silently=False,
     )
     return "Done"
