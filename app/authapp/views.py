@@ -15,6 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 class CustomLoginView(LoginView):
+    """Кастомная форма входа"""
     def form_valid(self, form):
         ret = super().form_valid(form)
         message = _("Login success!<br>Hi, %(username)s") % {
@@ -36,12 +37,14 @@ class CustomLoginView(LoginView):
 
 
 class CustomLogoutView(LogoutView):
+    """Кастомная форма выхода"""
     def dispatch(self, request, *args, **kwargs):
         messages.add_message(self.request, messages.INFO, _("See you later!"))
         return super().dispatch(request, *args, **kwargs)
 
 
 class RegisterView(CreateView):
+    """Представление регистрации"""
     model = get_user_model()
     form_class = forms.CustomUserCreationForm
     success_url = reverse_lazy("mainapp:main_page")
@@ -56,6 +59,7 @@ class RegisterView(CreateView):
 
 
 class ProfileEditView(UserPassesTestMixin, UpdateView):
+    """Представление изменения данных пользователя"""
     model = get_user_model()
     form_class = forms.CustomUserChangeForm
 

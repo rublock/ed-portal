@@ -10,13 +10,14 @@ from django.utils.translation import gettext_lazy as _
 
 
 def users_avatars_path(instance, filename):
-    # MEDIA_ROOT / user_<username> / avatars / <filename>
+    """Путь сохранения аватарки"""
     num = int(time() * 1000)
     suff = Path(filename).suffix
     return "user_{0}/avatars/{1}".format(instance.username, f"pic_{num}{suff}")
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
+    """Кастомная модель пользователя"""
     username_validator = ASCIIUsernameValidator()
 
     username = models.CharField(

@@ -5,6 +5,7 @@ from mainapp import models as mainapp_models
 
 
 class CourseFeedbackForm(forms.ModelForm):
+    """Форма отзыва о курсе"""
     def __init__(self, *args, course=None, user=None, **kwargs):
         ret = super().__init__(*args, **kwargs)
         if course and user:
@@ -23,6 +24,7 @@ class CourseFeedbackForm(forms.ModelForm):
 
 
 class MailFeedbackForm(forms.Form):
+    """Форма отзыва в техподдержку"""
     user_id = forms.IntegerField(widget=forms.HiddenInput)
     message = forms.CharField(
         widget=forms.Textarea,

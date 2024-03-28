@@ -4,6 +4,7 @@ SERVER_IP_ADDR = "188.225.37.37"
 
 
 class LoadTesting(HttpUser):
+    """Нагрузочное тестирование"""
     @task
     def test_some_pages_open(self):
         self.client.get(f"http://{SERVER_IP_ADDR}/authapp/register/")
