@@ -1,0 +1,641 @@
+[2024-03-28 11:12:15,786] INFO django.utils.autoreload (266) C:\git\ed_portal\app\config\settings.py changed, reloading.
+[2024-03-28 11:12:19,072] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 11:12:33,834] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 11:12:41,294] INFO django.server (212) "GET / HTTP/1.1" 200 21081
+[2024-03-28 11:12:41,435] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2024-03-28 11:12:41,442] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2024-03-28 11:12:41,665] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2024-03-28 11:12:41,720] INFO django.server (212) "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+[2024-03-28 11:12:44,288] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 16751
+[2024-03-28 11:13:05,588] ERROR django.request (241) Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\utils\decorators.py", line 126, in _wrapper_view
+    result = middleware.process_request(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\middleware\cache.py", line 158, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\utils\cache.py", line 391, in get_cache_key
+    headerlist = cache.get(cache_key)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 149, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\commands\core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 1086, in get_connection
+    connection.connect()
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+[2024-03-28 11:13:05,610] ERROR django.server (212) "GET /courses/ HTTP/1.1" 500 141604
+[2024-03-28 11:14:55,055] INFO django.utils.autoreload (266) C:\git\ed_portal\app\mainapp\urls.py changed, reloading.
+[2024-03-28 11:14:58,907] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 11:15:01,743] INFO django.server (212) "GET / HTTP/1.1" 200 21081
+[2024-03-28 11:15:03,920] INFO django.server (212) "GET /courses/ HTTP/1.1" 200 15611
+[2024-03-28 11:16:56,453] INFO django.server (212) "GET / HTTP/1.1" 200 21080
+[2024-03-28 11:16:56,552] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2024-03-28 11:16:56,572] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2024-03-28 11:16:56,779] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2024-03-28 11:16:56,784] INFO django.server (212) "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+[2024-03-28 11:16:58,072] INFO django.server (212) "GET /courses/ HTTP/1.1" 200 17806
+[2024-03-28 11:16:58,166] INFO django.server (212) "GET /static/img/course001.jpg HTTP/1.1" 200 166562
+[2024-03-28 11:16:58,167] INFO django.server (212) "GET /static/img/course002.jpg HTTP/1.1" 200 191482
+[2024-03-28 11:16:58,178] INFO django.server (212) "GET /static/img/course006.jpg HTTP/1.1" 200 105671
+[2024-03-28 11:16:58,184] INFO django.server (212) "GET /static/img/course003.jpg HTTP/1.1" 200 203887
+[2024-03-28 11:16:58,224] INFO django.server (212) "GET /static/img/course004.jpg HTTP/1.1" 200 89109
+[2024-03-28 11:16:58,229] INFO django.server (212) "GET /static/img/course005.jpg HTTP/1.1" 200 250218
+[2024-03-28 11:16:58,235] INFO django.server (212) "GET /static/img/course007.jpg HTTP/1.1" 200 112359
+[2024-03-28 11:16:58,240] INFO django.server (212) "GET /static/img/no_image.svg HTTP/1.1" 200 1711
+[2024-03-28 11:16:59,491] INFO django.server (212) "GET /news/ HTTP/1.1" 200 22085
+[2024-03-28 11:16:59,620] INFO django.server (212) "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13276
+[2024-03-28 11:17:00,868] INFO django.server (212) "GET /news/1/detail HTTP/1.1" 200 16836
+[2024-03-28 11:17:03,704] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 23126
+[2024-03-28 11:17:06,408] INFO django.server (212) "GET /contacts/ HTTP/1.1" 200 21950
+[2024-03-28 11:19:44,686] INFO django.server (212) "GET /news/ HTTP/1.1" 200 22086
+[2024-03-28 11:19:48,702] INFO django.server (212) "GET /contacts/ HTTP/1.1" 200 21949
+[2024-03-28 11:19:50,945] INFO django.server (212) "GET / HTTP/1.1" 200 21080
+[2024-03-28 11:35:20,703] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 11:43:04,439] INFO django.server (212) "GET / HTTP/1.1" 200 21082
+[2024-03-28 11:43:04,490] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2024-03-28 11:43:04,547] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2024-03-28 11:43:04,954] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2024-03-28 11:43:04,976] INFO django.server (212) "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+[2024-03-28 11:43:07,107] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 24262
+[2024-03-28 11:47:46,018] INFO django.utils.autoreload (266) C:\git\ed_portal\app\authapp\models.py changed, reloading.
+[2024-03-28 11:47:54,085] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 11:47:59,687] INFO django.server (212) "GET /courses/ HTTP/1.1" 200 17807
+[2024-03-28 11:48:04,031] ERROR django.request (241) Internal Server Error: /courses/1/
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\views\generic\base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\app\mainapp\views.py", line 87, in get_context_data
+    cached_feedback = cache.get(f"feedback_list_{pk}")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 149, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\commands\core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 1086, in get_connection
+    connection.connect()
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+[2024-03-28 11:48:04,074] ERROR django.server (212) "GET /courses/1/ HTTP/1.1" 500 146525
+[2024-03-28 11:48:04,397] WARNING django.request (241) Not Found: /favicon.ico
+[2024-03-28 11:48:04,397] WARNING django.server (212) "GET /favicon.ico HTTP/1.1" 404 14025
+[2024-03-28 11:50:04,629] ERROR django.request (241) Internal Server Error: /courses/1/
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\views\generic\base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\app\mainapp\views.py", line 87, in get_context_data
+    cached_feedback = cache.get(f"feedback_list_{pk}")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 149, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\commands\core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 1086, in get_connection
+    connection.connect()
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+[2024-03-28 11:50:04,656] ERROR django.server (212) "GET /courses/1/ HTTP/1.1" 500 146789
+[2024-03-28 11:50:04,701] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+[2024-03-28 11:50:04,702] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+[2024-03-28 11:50:04,714] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[2024-03-28 11:50:05,174] INFO django.server (212) "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+[2024-03-28 11:50:05,270] WARNING django.request (241) Not Found: /favicon.ico
+[2024-03-28 11:50:05,271] WARNING django.server (212) "GET /favicon.ico HTTP/1.1" 404 14025
+[2024-03-28 11:51:54,459] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 11:52:01,206] ERROR django.request (241) Internal Server Error: /courses/1/
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\templatetags\cache.py", line 51, in render
+    value = fragment_cache.get(cache_key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 149, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\commands\core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 1086, in get_connection
+    connection.connect()
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+[2024-03-28 11:52:01,332] ERROR django.server (212) "GET /courses/1/ HTTP/1.1" 500 213909
+[2024-03-28 11:53:02,446] INFO django.utils.autoreload (266) C:\git\ed_portal\app\mainapp\views.py changed, reloading.
+[2024-03-28 11:53:06,811] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 11:53:12,151] ERROR django.request (241) Internal Server Error: /courses/1/
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\views\generic\base.py", line 226, in get
+    context = self.get_context_data(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\app\mainapp\views.py", line 87, in get_context_data
+    cached_feedback = cache.get(f"feedback_list_{pk}")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 149, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\commands\core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 1086, in get_connection
+    connection.connect()
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+[2024-03-28 11:53:12,233] ERROR django.server (212) "GET /courses/1/ HTTP/1.1" 500 146662
+[2024-03-28 11:53:25,952] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 11:53:30,850] ERROR django.request (241) Internal Server Error: /courses/1/
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\templatetags\cache.py", line 51, in render
+    value = fragment_cache.get(cache_key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 149, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\commands\core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 1086, in get_connection
+    connection.connect()
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+[2024-03-28 11:53:30,969] ERROR django.server (212) "GET /courses/1/ HTTP/1.1" 500 213932
+[2024-03-28 11:53:49,943] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 11:53:53,028] INFO django.server (212) "GET /courses/1/ HTTP/1.1" 200 28279
+[2024-03-28 11:54:31,498] INFO django.utils.autoreload (266) C:\git\ed_portal\app\mainapp\forms.py changed, reloading.
+[2024-03-28 11:54:35,309] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 11:56:47,125] INFO django.utils.autoreload (266) C:\git\ed_portal\app\mainapp\forms.py changed, reloading.
+[2024-03-28 11:56:58,491] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 11:58:01,649] INFO django.utils.autoreload (266) C:\git\ed_portal\app\mainapp\views.py changed, reloading.
+[2024-03-28 11:58:06,850] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 12:00:36,835] INFO django.utils.autoreload (266) C:\git\ed_portal\app\mainapp\models.py changed, reloading.
+[2024-03-28 12:00:40,669] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 12:00:45,122] INFO django.server (212) "GET /doc_site/ HTTP/1.1" 200 17629
+[2024-03-28 12:00:45,339] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2024-03-28 12:00:45,340] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2024-03-28 12:00:45,493] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2024-03-28 12:00:45,507] INFO django.server (212) "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+[2024-03-28 12:03:08,284] INFO django.utils.autoreload (266) C:\git\ed_portal\app\mainapp\views.py changed, reloading.
+[2024-03-28 12:03:14,576] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 12:04:58,098] INFO django.utils.autoreload (266) C:\git\ed_portal\app\mainapp\urls.py changed, reloading.
+[2024-03-28 12:05:02,055] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 14:00:12,795] INFO mainapp.views (45) New news created: None NewTestNews001
+[2024-03-28 14:00:27,471] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54119)
+[2024-03-28 14:00:27,471] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54120)
+[2024-03-28 14:00:27,471] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54105)
+[2024-03-28 14:00:27,471] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54118)
+[2024-03-28 14:00:27,471] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54121)
+[2024-03-28 14:00:27,472] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54117)
+[2024-03-28 14:00:38,271] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54141)
+[2024-03-28 14:00:38,273] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54142)
+[2024-03-28 14:00:38,274] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54149)
+[2024-03-28 14:00:38,282] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54150)
+[2024-03-28 14:00:38,285] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54147)
+[2024-03-28 14:00:38,286] INFO django.server (81) - Broken pipe from ('127.0.0.1', 54151)
+[2024-03-28 14:01:10,168] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-03-28 14:01:12,988] INFO django.server (212) "GET / HTTP/1.1" 200 21081
+[2024-03-28 14:01:13,050] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2024-03-28 14:01:13,130] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2024-03-28 14:01:13,403] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2024-03-28 14:01:13,411] INFO django.server (212) "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+[2024-03-28 14:01:15,645] INFO django.server (212) "GET /contacts/ HTTP/1.1" 200 21949
+[2024-03-28 14:01:22,551] ERROR django.request (241) Internal Server Error: /contacts/
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\app\mainapp\views.py", line 132, in post
+    cache_lock_flag = cache.get(f"mail_feedback_lock_{self.request.user.pk}")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 149, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\commands\core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 1086, in get_connection
+    connection.connect()
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+[2024-03-28 14:01:22,586] ERROR django.server (212) "POST /contacts/ HTTP/1.1" 500 142134
+[2024-03-28 14:01:22,949] WARNING django.request (241) Not Found: /favicon.ico
+[2024-03-28 14:01:22,950] WARNING django.server (212) "GET /favicon.ico HTTP/1.1" 404 14025
+[2024-03-28 14:02:38,845] INFO django.server (212) "GET / HTTP/1.1" 200 21080
+[2024-03-28 14:02:45,636] INFO django.server (212) "POST /i18n/setlang/ HTTP/1.1" 302 0
+[2024-03-28 14:02:45,677] INFO django.server (212) "GET / HTTP/1.1" 200 21905
+[2024-03-28 14:05:32,605] INFO django.server (212) "GET /news/ HTTP/1.1" 200 22910
+[2024-03-28 14:05:32,701] INFO django.server (212) "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13276
+[2024-03-28 14:05:42,336] INFO django.server (212) "GET /log_view/ HTTP/1.1" 200 60597
+[2024-03-28 14:06:05,950] INFO django.server (212) "GET /contacts/ HTTP/1.1" 200 22809
+[2024-03-28 14:06:12,898] INFO django.server (212) "GET /authapp/profile_edit/1/ HTTP/1.1" 200 18999
+[2024-03-28 14:06:13,179] WARNING django.request (241) Not Found: /avatar_default.svg
+[2024-03-28 14:06:13,180] WARNING django.server (212) "GET /avatar_default.svg HTTP/1.1" 404 14868
+[2024-03-28 14:06:40,590] INFO django.server (212) "GET /contacts/ HTTP/1.1" 200 22809
+[2024-03-28 14:06:49,782] ERROR django.request (241) Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\utils\decorators.py", line 126, in _wrapper_view
+    result = middleware.process_request(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\middleware\cache.py", line 158, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django\utils\cache.py", line 391, in get_cache_key
+    headerlist = cache.get(cache_key)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 149, in _record_call
+    value = original_method(*args, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\git\ed_portal\venv\Lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+            ^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\commands\core.py", line 1829, in get
+    return self.execute_command("GET", name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 1086, in get_connection
+    connection.connect()
+  File "C:\git\ed_portal\venv\Lib\site-packages\redis\connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to redis:6379. getaddrinfo failed.
+[2024-03-28 14:06:49,804] ERROR django.server (212) "GET /courses/ HTTP/1.1" 500 142525
+[2024-03-28 14:06:51,685] INFO django.server (212) "GET /news/ HTTP/1.1" 200 22909
+[2024-03-28 14:06:55,717] INFO django.server (212) "GET / HTTP/1.1" 200 21905
+[2024-03-28 14:07:00,747] INFO django.server (212) "GET /news/ HTTP/1.1" 200 22909
