@@ -10,7 +10,7 @@ python manage.py test
 ```angular2html
 locust
 ```
-![](C:\git\ed_portal\app\static\img\locust.PNG)
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/locust.PNG)
 
 #### Deploy
 * переименуйте .env.sample в .env и заполните
@@ -19,10 +19,10 @@ locust
 docker compose -f docker-compose-prod.yml up
 ```
 > главная страница
-![](C:\git\ed_portal\app\static\img\main_page.PNG)
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/main_page.PNG)
 > логи
-![](C:\git\ed_portal\app\static\img\logs.PNG)
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/logs.PNG)
 > личный кабинет
-![](C:\git\ed_portal\app\static\img\profile.PNG)
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/profile.PNG)
 > debug toolbar
-![](C:\git\ed_portal\app\static\img\toolbar.PNG)
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/locust.PNG)
