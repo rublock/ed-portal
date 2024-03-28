@@ -25,4 +25,4 @@ docker compose -f docker-compose-prod.yml up
 > личный кабинет
 ![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/profile.PNG)
 > debug toolbar
-![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/locust.PNG)
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/toolbar.PNG)
