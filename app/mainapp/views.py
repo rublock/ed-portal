@@ -21,10 +21,12 @@ logger = logging.getLogger(__name__)
 
 
 class MainPageView(TemplateView):
+    """Главная страница"""
     template_name = "mainapp/index.html"
 
 
 class NewsListView(ListView):
+    """Список новостей"""
     model = mainapp_models.News
     paginate_by = 5
 
@@ -33,6 +35,7 @@ class NewsListView(ListView):
 
 
 class NewsCreateView(PermissionRequiredMixin, CreateView):
+    """Представление создания новости"""
     model = mainapp_models.News
     fields = "__all__"
     success_url = reverse_lazy("mainapp:news")
@@ -43,10 +46,12 @@ class NewsCreateView(PermissionRequiredMixin, CreateView):
         return super().form_valid(form)
 
 class NewsDetailView(DetailView):
+    """Представление новости"""
     model = mainapp_models.News
 
 
 class NewsUpdateView(PermissionRequiredMixin, UpdateView):
+    """Представление редактирования новости"""
     model = mainapp_models.News
     fields = "__all__"
     success_url = reverse_lazy("mainapp:news")
@@ -54,12 +59,14 @@ class NewsUpdateView(PermissionRequiredMixin, UpdateView):
 
 
 class NewsDeleteView(PermissionRequiredMixin, DeleteView):
+    """Представление удаления новости"""
     model = mainapp_models.News
     success_url = reverse_lazy("mainapp:news")
     permission_required = ("mainapp.delete_news",)
 
 
 class CoursesListView(TemplateView):
+    """Представление списка курсов"""
     template_name = "mainapp/courses_list.html"
 
     def get_context_data(self, **kwargs):
@@ -69,6 +76,7 @@ class CoursesListView(TemplateView):
 
 
 class CoursesDetailView(TemplateView):
+    """Представление курса"""
     template_name = "mainapp/courses_detail.html"
 
     def get_context_data(self, pk=None, **kwargs):
@@ -99,6 +107,7 @@ class CoursesDetailView(TemplateView):
 
 
 class CourseFeedbackFormProcessView(LoginRequiredMixin, CreateView):
+    """Представления отзыва о курсе"""
     model = mainapp_models.CourseFeedback
     form_class = mainapp_forms.CourseFeedbackForm
 
@@ -109,6 +118,7 @@ class CourseFeedbackFormProcessView(LoginRequiredMixin, CreateView):
 
 
 class ContactsPageView(TemplateView):
+    """Представление страницы контактов"""
     template_name = "mainapp/contacts.html"
 
     def get_context_data(self, **kwargs):
@@ -141,10 +151,12 @@ class ContactsPageView(TemplateView):
 
 
 class DocSitePageView(TemplateView):
+    """Представление документации по сайту"""
     template_name = "mainapp/doc_site.html"
 
 
 class LogView(TemplateView):
+    """Представление логов"""
     template_name = "mainapp/log_view.html"
 
     def get_context_data(self, **kwargs):
@@ -160,6 +172,7 @@ class LogView(TemplateView):
 
 
 class LogDownloadView(UserPassesTestMixin, View):
+    """Кнопка скачать логи"""
     def test_func(self):
         return self.request.user.is_superuser
 
