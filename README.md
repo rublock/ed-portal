@@ -1,4 +1,4 @@
-## Пэт проект - образовательный портал
+## Learning management system
 
 `Python 3.10` `Django 4.2.7` `PostgreSQL 14` `Celery` `Redis` `Django TestCase` `Selenium` `locust` `Docker` `Nginx` `UWSGI`
 
