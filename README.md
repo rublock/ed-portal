@@ -19,7 +19,7 @@ locust
 #### Deploy
 * переименуйте .env.sample в .env и заполните
 * установите docker на вашем сервере
-```angular2html
+```html
 docker compose -f docker-compose-prod.yml up
 ```
 > главная страница
