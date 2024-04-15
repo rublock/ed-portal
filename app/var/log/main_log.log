@@ -2610,3 +2610,40 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'api' not found. 'api' is not
 [2024-04-15 15:13:28,725] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
 [2024-04-15 15:13:28,731] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
 [2024-04-15 15:13:28,732] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 15:21:03,919] INFO django.server (212) "GET / HTTP/1.1" 200 11472
+[2024-04-15 15:21:03,978] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 15:21:03,980] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 15:21:03,997] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 15:21:03,999] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 15:21:04,000] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 15:21:04,004] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 15:21:04,007] WARNING django.request (241) Not Found: /static/static/img/slider001.jpg
+[2024-04-15 15:21:04,009] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 179
+[2024-04-15 15:21:04,010] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 15:21:04,013] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 15:21:04,069] WARNING django.request (241) Not Found: /static/static/img/slider002.jpg
+[2024-04-15 15:21:04,074] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 179
+[2024-04-15 15:21:04,072] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 15:21:04,076] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 15:21:04,071] WARNING django.request (241) Not Found: /static/static/img/slider003.jpg
+[2024-04-15 15:21:04,074] WARNING django.request (241) Not Found: /static/static/img/user001.png
+[2024-04-15 15:21:04,084] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 179
+[2024-04-15 15:21:04,085] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 179
+[2024-04-15 15:21:04,109] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 15:21:04,111] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 15:21:04,114] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 15:21:04,116] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 15:21:04,143] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 15:21:04,144] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 15:21:04,147] WARNING django.request (241) Not Found: /static/static/img/user002.png
+[2024-04-15 15:21:04,149] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 15:21:04,152] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 179
+[2024-04-15 15:21:04,153] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 15:21:04,160] WARNING django.request (241) Not Found: /static/static/img/user003.png
+[2024-04-15 15:21:04,161] WARNING django.request (241) Not Found: /static/static/img/promo001.jpg
+[2024-04-15 15:21:04,163] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 179
+[2024-04-15 15:21:04,164] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 179
+[2024-04-15 15:21:04,169] WARNING django.request (241) Not Found: /static/static/img/promo002.jpg
+[2024-04-15 15:21:04,171] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 179
+[2024-04-15 15:21:04,183] WARNING django.request (241) Not Found: /static/static/img/promo003.jpg
+[2024-04-15 15:21:04,184] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 179
