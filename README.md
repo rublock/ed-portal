@@ -1,6 +1,10 @@
 ## Learning management system
+портал для размещения образовательных программ
 
-`Python 3.10` `Django 4.2.7` `PostgreSQL 14` `Celery` `Redis` `Django TestCase` `Selenium` `locust` `Docker` `Nginx` `UWSGI`
+#### WEB http://188.225.37.37/
+
+`Python 3.10` `Django 4.2.7` `DRF` `Swagger` `Redoc` `PostgreSQL 14` `Celery` `Redis` `Django TestCase` `Selenium` 
+`locust` `Docker` `Nginx` `UWSGI`
 
 * тестирование
 ```angular2html
@@ -26,3 +30,9 @@ docker compose -f docker-compose-prod.yml up
 ![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/profile.PNG)
 > debug toolbar
 ![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/toolbar.PNG)
+> API
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/api.PNG)
+> Redoc
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/redoc.PNG)
+> Swagger
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/swagger.PNG)
