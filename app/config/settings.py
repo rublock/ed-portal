@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     "mainapp",
     "authapp",
     "debug_toolbar",
+    'rest_framework',
+    'api',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -97,37 +100,22 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-if DEBUG:
-    STATIC_URL = "/static/"
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': os.environ.get('POSTGRES_DB'),
+       'USER': os.environ.get('POSTGRES_USER'),
+       'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+       'HOST': os.environ.get('POSTGRES_HOST'),
+       'PORT': os.environ.get('POSTGRES_PORT'),
+   }
+}
 
-    STATICFILES_DIRS = [
-        BASE_DIR / "static",
-    ]
-else:
-    STATIC_URL = '/static/static/'
-    MEDIA_URL = '/static/media/'
+STATIC_URL = '/static/static/'
+MEDIA_URL = '/static/media/'
 
-    MEDIA_ROOT = '/vol/web/media/'
-    STATIC_ROOT = '/vol/web/static/'
-
-if DEBUG:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
-else:
-    DATABASES = {
-       'default': {
-           'ENGINE': 'django.db.backends.postgresql',
-           'NAME': os.environ.get('POSTGRES_DB'),
-           'USER': os.environ.get('POSTGRES_USER'),
-           'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-           'HOST': os.environ.get('POSTGRES_HOST'),
-           'PORT': os.environ.get('POSTGRES_PORT'),
-       }
-    }
+MEDIA_ROOT = '/vol/web/media/'
+STATIC_ROOT = '/vol/web/static/'
 
 LANGUAGE_CODE = "en-us"
 LANGUAGES = (
@@ -216,3 +204,16 @@ CELERY_RESULT_BACKEND = "redis://redis:6379/0"
 CELERY_ACCEPT_CONTENT = {"application/json"}
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TASK_SERIALIZER = "json"
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "ed_portal Project",
+    "DESCRIPTION": "ed_portal DRF",
+    "VERSION": "1.0.0",
+}
