@@ -22,6 +22,12 @@ docker compose -f docker-compose-prod.yml up
 ![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/main_page.PNG)
 > логи
 ![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/logs.PNG)
+> API
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/api.PNG)
+> redoc
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/redoc.PNG)
+> swagger
+![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/swagger.PNG)
 > личный кабинет
 ![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/profile.PNG)
 > debug toolbar

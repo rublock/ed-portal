@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     "mainapp",
     "authapp",
     "debug_toolbar",
+    'rest_framework',
+    'api',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -216,3 +219,16 @@ CELERY_RESULT_BACKEND = "redis://redis:6379/0"
 CELERY_ACCEPT_CONTENT = {"application/json"}
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TASK_SERIALIZER = "json"
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "ed_portal Project",
+    "DESCRIPTION": "ed_portal DRF",
+    "VERSION": "1.0.0",
+}

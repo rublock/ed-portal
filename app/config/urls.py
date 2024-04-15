@@ -10,6 +10,8 @@ urlpatterns = [
     path("", include("mainapp.urls", namespace="mainapp")),
     path("authapp/", include("authapp.urls", namespace="authapp")),
     path("social_auth/", include("social_django.urls", namespace="social")),
+    path("api/", include("api.urls")),
+    path("api-auth/", include("rest_framework.urls")),
 ]
 
 if settings.DEBUG:
