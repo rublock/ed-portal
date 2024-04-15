@@ -31,8 +31,8 @@ docker compose -f docker-compose-prod.yml up
 > debug toolbar
 ![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/toolbar.PNG)
 > API
-![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/api.PNG)
+![](https://github.com/rublock/ed_portal/blob/main/app/static/img/api.png)
 > Redoc
-![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/redoc.PNG)
+![](https://github.com/rublock/ed_portal/blob/main/app/static/img/redoc.png)
 > Swagger
-![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/swagger.PNG)
+![](https://github.com/rublock/ed_portal/blob/main/app/static/img/swagger.png)
