@@ -59,10 +59,11 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'swagger-ui' %}">Swagger</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-item" href="{% url 'mainapp:log_view' %}">Лог</a>
+        </li>
         <li
           class="nav-item {% if request.resolver_match.view_name == 'mainapp:contacts' %}active{% endif %}">
-          <a class="dropdown-item" href="{% url 'mainapp:log_view' %}"
-              target="_blank">Лог</a>
           <a class="nav-link" href="{% url 'mainapp:contacts' %}">{% translate "Contacts" %}</a>
         </li>
       </ul>
