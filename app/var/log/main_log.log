@@ -1,0 +1,1187 @@
+[2024-04-15 11:28:02,215] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 11:28:05,262] ERROR django.security.DisallowedHost (124) Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/python/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/python/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/python/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/python/lib/python3.10/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[2024-04-15 11:28:05,267] WARNING django.request (241) Bad Request: /
+[2024-04-15 11:28:05,269] WARNING django.server (212) "GET / HTTP/1.1" 400 143
+[2024-04-15 11:28:05,437] ERROR django.security.DisallowedHost (124) Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/python/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/python/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/python/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/python/lib/python3.10/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[2024-04-15 11:28:05,438] WARNING django.request (241) Bad Request: /favicon.ico
+[2024-04-15 11:28:05,440] WARNING django.server (212) "GET /favicon.ico HTTP/1.1" 400 143
+[2024-04-15 11:28:19,406] INFO django.server (212) "GET / HTTP/1.1" 200 11276
+[2024-04-15 11:28:19,522] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 11:28:19,523] WARNING django.request (241) Not Found: /static/static/img/slider001.jpg
+[2024-04-15 11:28:19,525] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 11:28:19,536] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 179
+[2024-04-15 11:28:19,538] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 11:28:19,545] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 11:28:19,545] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 11:28:19,561] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 11:28:19,562] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 11:28:19,563] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 11:28:19,617] WARNING django.request (241) Not Found: /static/static/img/slider003.jpg
+[2024-04-15 11:28:19,618] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 179
+[2024-04-15 11:28:19,623] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 11:28:19,625] WARNING django.request (241) Not Found: /static/static/img/slider002.jpg
+[2024-04-15 11:28:19,625] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 11:28:19,627] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 179
+[2024-04-15 11:28:19,633] WARNING django.request (241) Not Found: /static/static/img/user001.png
+[2024-04-15 11:28:19,635] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 11:28:19,639] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 11:28:19,640] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 179
+[2024-04-15 11:28:19,644] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 11:28:19,646] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 11:28:19,646] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 11:28:19,649] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 11:28:19,656] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 11:28:19,660] WARNING django.request (241) Not Found: /static/static/img/user002.png
+[2024-04-15 11:28:19,663] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 179
+[2024-04-15 11:28:19,664] WARNING django.request (241) Not Found: /static/static/img/user003.png
+[2024-04-15 11:28:19,665] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 11:28:19,666] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 179
+[2024-04-15 11:28:19,683] WARNING django.request (241) Not Found: /static/static/img/promo001.jpg
+[2024-04-15 11:28:19,683] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 179
+[2024-04-15 11:28:19,687] WARNING django.request (241) Not Found: /static/static/img/promo002.jpg
+[2024-04-15 11:28:19,691] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 179
+[2024-04-15 11:28:19,708] WARNING django.request (241) Not Found: /static/static/img/promo003.jpg
+[2024-04-15 11:28:19,710] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 179
+[2024-04-15 11:28:19,825] WARNING django.request (241) Not Found: /static/static/img/favicon.ico
+[2024-04-15 11:28:19,826] WARNING django.server (212) "GET /static/static/img/favicon.ico HTTP/1.1" 404 179
+[2024-04-15 11:28:24,865] WARNING django.request (241) Not Found: /api
+[2024-04-15 11:28:24,865] WARNING django.server (212) "GET /api HTTP/1.1" 404 179
+[2024-04-15 11:28:24,956] WARNING django.request (241) Not Found: /favicon.ico
+[2024-04-15 11:28:24,956] WARNING django.server (212) "GET /favicon.ico HTTP/1.1" 404 179
+[2024-04-15 11:28:44,244] INFO django.server (212) "GET /api/schema HTTP/1.1" 301 0
+[2024-04-15 11:28:44,270] ERROR django.request (241) Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/python/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/python/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/python/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/python/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/python/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/python/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/python/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/python/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/python/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/python/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/python/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/python/lib/python3.10/site-packages/drf_spectacular/generators.py", line 250, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'drf_spectacular.views.SpectacularAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+[2024-04-15 11:28:44,273] ERROR django.server (212) "GET /api/schema/ HTTP/1.1" 500 145
+[2024-04-15 11:29:02,833] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 721
+[2024-04-15 11:29:03,229] ERROR django.request (241) Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "/python/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/python/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/python/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/python/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/python/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/python/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/python/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/python/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/python/lib/python3.10/site-packages/drf_spectacular/views.py", line 84, in get
+    return self._get_schema_response(request)
+  File "/python/lib/python3.10/site-packages/drf_spectacular/views.py", line 92, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "/python/lib/python3.10/site-packages/drf_spectacular/generators.py", line 285, in get_schema
+    paths=self.parse(request, public),
+  File "/python/lib/python3.10/site-packages/drf_spectacular/generators.py", line 250, in parse
+    assert isinstance(view.schema, AutoSchema), (
+AssertionError: Incompatible AutoSchema used on View <class 'drf_spectacular.views.SpectacularAPIView'>. Is DRF's DEFAULT_SCHEMA_CLASS pointing to "drf_spectacular.openapi.AutoSchema" or any other drf-spectacular compatible AutoSchema?
+[2024-04-15 11:29:03,230] ERROR django.server (212) "GET /api/schema/ HTTP/1.1" 500 145
+[2024-04-15 11:30:00,664] WARNING django.request (241) Not Found: /api/
+[2024-04-15 11:30:00,665] WARNING django.server (212) "GET /api/ HTTP/1.1" 404 179
+[2024-04-15 11:30:12,991] WARNING django.request (241) Not Found: /api-auth
+[2024-04-15 11:30:12,992] WARNING django.server (212) "GET /api-auth HTTP/1.1" 404 179
+[2024-04-15 11:30:15,850] WARNING django.request (241) Not Found: /api-auth/
+[2024-04-15 11:30:15,851] WARNING django.server (212) "GET /api-auth/ HTTP/1.1" 404 179
+[2024-04-15 11:31:30,054] INFO django.utils.autoreload (266) /app/config/settings.py changed, reloading.
+[2024-04-15 11:31:30,887] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 11:31:37,658] WARNING django.request (241) Not Found: /api-auth/
+[2024-04-15 11:31:37,659] WARNING django.server (212) "GET /api-auth/ HTTP/1.1" 404 179
+[2024-04-15 11:31:40,883] WARNING django.request (241) Not Found: /api/
+[2024-04-15 11:31:40,884] WARNING django.server (212) "GET /api/ HTTP/1.1" 404 179
+[2024-04-15 11:31:44,544] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 721
+[2024-04-15 11:31:44,785] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1409
+[2024-04-15 11:31:47,152] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1409
+[2024-04-15 11:32:06,351] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1409
+[2024-04-15 11:32:09,623] INFO django.server (212) "GET /api/schema/redoc HTTP/1.1" 301 0
+[2024-04-15 11:32:09,633] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 721
+[2024-04-15 11:32:09,779] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1409
+[2024-04-15 11:32:41,512] INFO django.server (212) "GET / HTTP/1.1" 200 11276
+[2024-04-15 11:32:41,590] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 11:32:41,591] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:41,597] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 11:32:41,599] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 11:32:41,601] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 11:32:41,603] WARNING django.request (241) Not Found: /static/static/img/slider001.jpg
+[2024-04-15 11:32:41,604] WARNING django.request (241) Not Found: /static/static/img/slider002.jpg
+[2024-04-15 11:32:41,606] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 11:32:41,615] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:41,615] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:41,617] WARNING django.request (241) Not Found: /static/static/img/slider003.jpg
+[2024-04-15 11:32:41,618] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:41,620] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:41,620] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:41,646] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 11:32:41,647] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 11:32:41,649] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:41,650] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:41,651] WARNING django.request (241) Not Found: /static/static/img/user001.png
+[2024-04-15 11:32:41,654] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 11:32:41,655] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 11:32:41,658] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:41,660] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 179
+[2024-04-15 11:32:41,662] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:41,679] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 11:32:41,680] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:41,685] WARNING django.request (241) Not Found: /static/static/img/user002.png
+[2024-04-15 11:32:41,686] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 179
+[2024-04-15 11:32:41,693] WARNING django.request (241) Not Found: /static/static/img/user003.png
+[2024-04-15 11:32:41,694] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 179
+[2024-04-15 11:32:41,723] WARNING django.request (241) Not Found: /static/static/img/promo001.jpg
+[2024-04-15 11:32:41,724] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:41,731] WARNING django.request (241) Not Found: /static/static/img/promo002.jpg
+[2024-04-15 11:32:41,733] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:41,740] WARNING django.request (241) Not Found: /static/static/img/promo003.jpg
+[2024-04-15 11:32:41,742] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:42,823] INFO django.server (212) "GET /courses/ HTTP/1.1" 200 7980
+[2024-04-15 11:32:42,915] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 11:32:42,917] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:42,952] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 11:32:42,957] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 11:32:42,959] WARNING django.request (241) Not Found: /static/static/img/course002.jpg
+[2024-04-15 11:32:42,962] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 11:32:42,963] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:42,972] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 11:32:42,973] WARNING django.server (212) "GET /static/static/img/course002.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:42,993] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:43,001] WARNING django.request (241) Not Found: /static/static/img/course004.jpg
+[2024-04-15 11:32:43,004] WARNING django.server (212) "GET /static/static/img/course004.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:43,012] WARNING django.request (241) Not Found: /static/static/img/course003.jpg
+[2024-04-15 11:32:43,013] WARNING django.server (212) "GET /static/static/img/course003.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:43,048] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 11:32:43,050] WARNING django.request (241) Not Found: /static/static/img/no_image.svg
+[2024-04-15 11:32:43,053] WARNING django.request (241) Not Found: /static/static/img/course007.jpg
+[2024-04-15 11:32:43,061] WARNING django.server (212) "GET /static/static/img/no_image.svg HTTP/1.1" 404 179
+[2024-04-15 11:32:43,055] WARNING django.request (241) Not Found: /static/static/img/course001.jpg
+[2024-04-15 11:32:43,059] WARNING django.request (241) Not Found: /static/static/img/course006.jpg
+[2024-04-15 11:32:43,054] WARNING django.request (241) Not Found: /static/static/img/course005.jpg
+[2024-04-15 11:32:43,065] WARNING django.server (212) "GET /static/static/img/course007.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:43,065] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:43,067] WARNING django.server (212) "GET /static/static/img/course001.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:43,068] WARNING django.server (212) "GET /static/static/img/course005.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:43,074] WARNING django.server (212) "GET /static/static/img/course006.jpg HTTP/1.1" 404 179
+[2024-04-15 11:32:43,101] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 11:32:43,105] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 11:32:43,106] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 11:32:43,104] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 11:32:43,112] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:43,119] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:43,123] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:43,124] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:44,602] INFO django.server (212) "GET /news/ HTTP/1.1" 200 10390
+[2024-04-15 11:32:44,697] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 11:32:44,698] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:44,704] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 11:32:44,712] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:44,706] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 11:32:44,709] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 11:32:44,715] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:44,720] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 11:32:44,724] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 11:32:44,727] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:44,729] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:44,730] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 11:32:44,772] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 11:32:44,773] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:44,790] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 11:32:44,791] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:44,796] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 11:32:44,798] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:46,161] INFO django.server (212) "GET /news/1/detail HTTP/1.1" 200 6950
+[2024-04-15 11:32:46,231] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 11:32:46,233] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:46,242] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 11:32:46,249] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:46,282] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 11:32:46,287] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 11:32:46,298] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 11:32:46,302] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 11:32:46,305] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:46,306] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 11:32:46,309] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 11:32:46,314] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:46,322] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 11:32:46,322] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:46,411] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 11:32:46,414] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 11:32:46,422] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 11:32:46,422] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 11:33:08,107] INFO django.utils.autoreload (266) /app/config/settings.py changed, reloading.
+[2024-04-15 11:33:08,879] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 11:33:15,521] WARNING django.request (241) Not Found: /api/
+[2024-04-15 11:33:15,522] WARNING django.server (212) "GET /api/ HTTP/1.1" 404 179
+[2024-04-15 11:33:19,636] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1409
+[2024-04-15 11:33:23,541] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 721
+[2024-04-15 11:33:23,670] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1409
+[2024-04-15 11:36:57,187] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 11:37:00,798] INFO django.server (212) "GET / HTTP/1.1" 200 11276
+[2024-04-15 11:37:00,859] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 11:37:00,860] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 11:37:00,863] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 11:37:00,865] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 11:37:00,866] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 11:37:00,867] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 11:37:00,873] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 11:37:00,877] WARNING django.request (241) Not Found: /static/static/img/slider001.jpg
+[2024-04-15 11:37:00,878] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 11:37:00,880] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 179
+[2024-04-15 11:37:00,906] WARNING django.request (241) Not Found: /static/static/img/slider002.jpg
+[2024-04-15 11:37:00,907] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 179
+[2024-04-15 11:37:00,919] WARNING django.request (241) Not Found: /static/static/img/slider003.jpg
+[2024-04-15 11:37:00,920] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 11:37:00,922] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 11:37:00,922] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 11:37:00,925] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 179
+[2024-04-15 11:37:00,926] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 11:37:00,928] WARNING django.request (241) Not Found: /static/static/img/user001.png
+[2024-04-15 11:37:00,930] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 11:37:00,930] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 11:37:00,932] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 11:37:00,940] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 11:37:00,944] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 179
+[2024-04-15 11:37:00,978] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 11:37:00,980] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 11:37:00,985] WARNING django.request (241) Not Found: /static/static/img/user003.png
+[2024-04-15 11:37:00,992] WARNING django.request (241) Not Found: /static/static/img/promo002.jpg
+[2024-04-15 11:37:00,993] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 179
+[2024-04-15 11:37:00,998] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 179
+[2024-04-15 11:37:01,000] WARNING django.request (241) Not Found: /static/static/img/promo001.jpg
+[2024-04-15 11:37:01,002] WARNING django.request (241) Not Found: /static/static/img/user002.png
+[2024-04-15 11:37:01,010] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 179
+[2024-04-15 11:37:01,011] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 179
+[2024-04-15 11:37:01,023] WARNING django.request (241) Not Found: /static/static/img/promo003.jpg
+[2024-04-15 11:37:01,025] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 179
+[2024-04-15 11:37:04,218] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 721
+[2024-04-15 11:37:04,407] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1409
+[2024-04-15 11:37:05,062] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 721
+[2024-04-15 11:37:05,195] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1409
+[2024-04-15 11:37:25,643] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4640
+[2024-04-15 11:37:26,129] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 3135
+[2024-04-15 11:42:22,733] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 11:42:28,059] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 11:42:28,418] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 11:42:32,176] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 11:42:32,410] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 3192
+[2024-04-15 11:42:46,815] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 11:43:07,620] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 11:43:07,809] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 11:44:27,147] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 11:44:27,616] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 3192
+[2024-04-15 11:47:07,653] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 11:47:09,793] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 11:47:10,062] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 11:47:11,648] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 11:47:11,771] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 11:47:12,448] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 11:47:12,550] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 11:47:12,642] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 11:47:12,782] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 11:47:12,887] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 11:47:13,008] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 11:47:13,041] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 11:47:13,247] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 11:47:15,741] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 11:47:17,648] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 11:47:17,869] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 3192
+[2024-04-15 11:47:33,166] WARNING django.request (241) Not Found: /api/
+[2024-04-15 11:47:33,167] WARNING django.server (212) "GET /api/ HTTP/1.1" 404 179
+[2024-04-15 11:47:33,505] WARNING django.request (241) Not Found: /api/1
+[2024-04-15 11:47:33,505] WARNING django.server (212) "GET /api/1 HTTP/1.1" 404 179
+[2024-04-15 13:17:59,085] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:11:27,669] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 14:11:27,897] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 14:13:32,711] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:13:34,621] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 14:13:34,860] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 1453
+[2024-04-15 14:13:39,579] INFO django.server (212) "GET / HTTP/1.1" 200 11276
+[2024-04-15 14:13:39,652] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:13:39,655] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:13:39,660] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:13:39,663] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:13:39,664] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:13:39,666] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:13:39,668] WARNING django.request (241) Not Found: /static/static/img/slider001.jpg
+[2024-04-15 14:13:39,670] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:13:39,671] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:13:39,674] WARNING django.request (241) Not Found: /static/static/img/slider002.jpg
+[2024-04-15 14:13:39,677] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:13:39,682] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:13:39,693] WARNING django.request (241) Not Found: /static/static/img/slider003.jpg
+[2024-04-15 14:13:39,694] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:13:39,695] WARNING django.request (241) Not Found: /static/static/img/user001.png
+[2024-04-15 14:13:39,696] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 179
+[2024-04-15 14:13:39,700] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:13:39,701] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:13:39,710] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:13:39,710] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:13:39,724] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:13:39,725] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:13:39,752] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:13:39,753] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:13:39,760] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:13:39,761] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:13:39,799] WARNING django.request (241) Not Found: /static/static/img/user002.png
+[2024-04-15 14:13:39,804] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 179
+[2024-04-15 14:13:39,817] WARNING django.request (241) Not Found: /static/static/img/promo001.jpg
+[2024-04-15 14:13:39,820] WARNING django.request (241) Not Found: /static/static/img/user003.png
+[2024-04-15 14:13:39,822] WARNING django.request (241) Not Found: /static/static/img/promo002.jpg
+[2024-04-15 14:13:39,830] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:13:39,833] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 179
+[2024-04-15 14:13:39,834] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:13:39,842] WARNING django.request (241) Not Found: /static/static/img/promo003.jpg
+[2024-04-15 14:13:39,843] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:13:47,541] WARNING django.request (241) Not Found: /api/
+[2024-04-15 14:13:47,542] WARNING django.server (212) "GET /api/ HTTP/1.1" 404 179
+[2024-04-15 14:13:54,342] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 14:13:54,781] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 3192
+[2024-04-15 14:15:35,957] WARNING django.request (241) Not Found: /api/
+[2024-04-15 14:15:35,958] WARNING django.server (212) "GET /api/ HTTP/1.1" 404 179
+[2024-04-15 14:16:47,147] INFO django.utils.autoreload (266) /app/api/urls.py changed, reloading.
+[2024-04-15 14:16:48,097] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:17:06,113] INFO django.utils.autoreload (266) /app/api/urls.py changed, reloading.
+[2024-04-15 14:17:06,804] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:17:14,840] INFO django.server (212) "GET /api/ HTTP/1.1" 200 14807
+[2024-04-15 14:17:14,948] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap.min.css
+[2024-04-15 14:17:14,950] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap-tweaks.css
+[2024-04-15 14:17:14,951] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:17:14,953] WARNING django.request (241) Not Found: /static/static/rest_framework/css/prettify.css
+[2024-04-15 14:17:14,953] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+[2024-04-15 14:17:14,954] WARNING django.server (212) "GET /static/static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+[2024-04-15 14:17:14,956] WARNING django.request (241) Not Found: /static/static/rest_framework/css/default.css
+[2024-04-15 14:17:14,959] WARNING django.request (241) Not Found: /static/static/rest_framework/js/jquery-3.7.1.min.js
+[2024-04-15 14:17:14,961] WARNING django.server (212) "GET /static/static/rest_framework/css/default.css HTTP/1.1" 404 179
+[2024-04-15 14:17:14,965] WARNING django.request (241) Not Found: /static/static/rest_framework/js/ajax-form.js
+[2024-04-15 14:17:14,966] WARNING django.server (212) "GET /static/static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:17:14,970] WARNING django.server (212) "GET /static/static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+[2024-04-15 14:17:14,980] WARNING django.request (241) Not Found: /static/static/rest_framework/js/csrf.js
+[2024-04-15 14:17:14,981] WARNING django.server (212) "GET /static/static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+[2024-04-15 14:17:14,988] WARNING django.request (241) Not Found: /static/static/rest_framework/js/bootstrap.min.js
+[2024-04-15 14:17:14,989] WARNING django.server (212) "GET /static/static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:17:14,992] WARNING django.request (241) Not Found: /static/static/rest_framework/js/prettify-min.js
+[2024-04-15 14:17:14,994] WARNING django.server (212) "GET /static/static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+[2024-04-15 14:17:14,996] WARNING django.request (241) Not Found: /static/static/rest_framework/js/default.js
+[2024-04-15 14:17:14,999] WARNING django.request (241) Not Found: /static/static/rest_framework/js/load-ajax-form.js
+[2024-04-15 14:17:15,000] WARNING django.server (212) "GET /static/static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:17:15,000] WARNING django.server (212) "GET /static/static/rest_framework/js/default.js HTTP/1.1" 404 179
+[2024-04-15 14:17:20,793] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 14:17:21,007] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 4266
+[2024-04-15 14:18:02,290] INFO django.utils.autoreload (266) /app/api/urls.py changed, reloading.
+[2024-04-15 14:18:03,203] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:21:09,979] INFO django.utils.autoreload (266) /app/api/views.py changed, reloading.
+[2024-04-15 14:21:10,898] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:21:55,408] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:22:19,613] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 14:22:20,045] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 7534
+[2024-04-15 14:22:37,383] INFO django.server (212) "GET /api/ HTTP/1.1" 200 14807
+[2024-04-15 14:22:37,519] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap.min.css
+[2024-04-15 14:22:37,519] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:22:37,522] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap-tweaks.css
+[2024-04-15 14:22:37,523] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+[2024-04-15 14:22:37,530] WARNING django.request (241) Not Found: /static/static/rest_framework/css/prettify.css
+[2024-04-15 14:22:37,532] WARNING django.server (212) "GET /static/static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+[2024-04-15 14:22:37,558] WARNING django.request (241) Not Found: /static/static/rest_framework/js/jquery-3.7.1.min.js
+[2024-04-15 14:22:37,559] WARNING django.server (212) "GET /static/static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+[2024-04-15 14:22:37,561] WARNING django.request (241) Not Found: /static/static/rest_framework/css/default.css
+[2024-04-15 14:22:37,565] WARNING django.request (241) Not Found: /static/static/rest_framework/js/ajax-form.js
+[2024-04-15 14:22:37,568] WARNING django.request (241) Not Found: /static/static/rest_framework/js/default.js
+[2024-04-15 14:22:37,570] WARNING django.request (241) Not Found: /static/static/rest_framework/js/bootstrap.min.js
+[2024-04-15 14:22:37,573] WARNING django.request (241) Not Found: /static/static/rest_framework/js/prettify-min.js
+[2024-04-15 14:22:37,580] WARNING django.request (241) Not Found: /static/static/rest_framework/js/csrf.js
+[2024-04-15 14:22:37,581] WARNING django.server (212) "GET /static/static/rest_framework/css/default.css HTTP/1.1" 404 179
+[2024-04-15 14:22:37,581] WARNING django.server (212) "GET /static/static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:22:37,582] WARNING django.server (212) "GET /static/static/rest_framework/js/default.js HTTP/1.1" 404 179
+[2024-04-15 14:22:37,585] WARNING django.server (212) "GET /static/static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:22:37,587] WARNING django.server (212) "GET /static/static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+[2024-04-15 14:22:37,600] WARNING django.server (212) "GET /static/static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+[2024-04-15 14:22:37,609] WARNING django.request (241) Not Found: /static/static/rest_framework/js/load-ajax-form.js
+[2024-04-15 14:22:37,614] WARNING django.server (212) "GET /static/static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:22:52,596] INFO django.server (212) "GET /api/1 HTTP/1.1" 301 0
+[2024-04-15 14:22:52,634] INFO django.server (212) "GET /api/1/ HTTP/1.1" 200 9667
+[2024-04-15 14:22:52,705] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap.min.css
+[2024-04-15 14:22:52,705] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:22:52,712] WARNING django.request (241) Not Found: /static/static/rest_framework/css/prettify.css
+[2024-04-15 14:22:52,715] WARNING django.request (241) Not Found: /static/static/rest_framework/css/default.css
+[2024-04-15 14:22:52,717] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap-tweaks.css
+[2024-04-15 14:22:52,725] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+[2024-04-15 14:22:52,722] WARNING django.request (241) Not Found: /static/static/rest_framework/js/ajax-form.js
+[2024-04-15 14:22:52,727] WARNING django.server (212) "GET /static/static/rest_framework/css/default.css HTTP/1.1" 404 179
+[2024-04-15 14:22:52,727] WARNING django.server (212) "GET /static/static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+[2024-04-15 14:22:52,720] WARNING django.request (241) Not Found: /static/static/rest_framework/js/jquery-3.7.1.min.js
+[2024-04-15 14:22:52,728] WARNING django.server (212) "GET /static/static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:22:52,731] WARNING django.server (212) "GET /static/static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+[2024-04-15 14:22:52,734] WARNING django.request (241) Not Found: /static/static/rest_framework/js/csrf.js
+[2024-04-15 14:22:52,736] WARNING django.server (212) "GET /static/static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+[2024-04-15 14:22:52,746] WARNING django.request (241) Not Found: /static/static/rest_framework/js/bootstrap.min.js
+[2024-04-15 14:22:52,746] WARNING django.server (212) "GET /static/static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:22:52,762] WARNING django.request (241) Not Found: /static/static/rest_framework/js/prettify-min.js
+[2024-04-15 14:22:52,762] WARNING django.server (212) "GET /static/static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+[2024-04-15 14:22:52,768] WARNING django.request (241) Not Found: /static/static/rest_framework/js/default.js
+[2024-04-15 14:22:52,770] WARNING django.request (241) Not Found: /static/static/rest_framework/js/load-ajax-form.js
+[2024-04-15 14:22:52,771] WARNING django.server (212) "GET /static/static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:22:52,776] WARNING django.server (212) "GET /static/static/rest_framework/js/default.js HTTP/1.1" 404 179
+[2024-04-15 14:22:57,817] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 14:22:58,238] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 7534
+[2024-04-15 14:23:07,512] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 14:23:07,742] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 7534
+[2024-04-15 14:26:28,859] INFO django.utils.autoreload (266) /app/api/views.py changed, reloading.
+[2024-04-15 14:26:29,862] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:26:33,616] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 14:26:33,911] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 7534
+[2024-04-15 14:26:39,079] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 14:26:39,343] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 7534
+[2024-04-15 14:27:18,665] INFO django.server (212) "GET /api/ HTTP/1.1" 200 14807
+[2024-04-15 14:27:18,715] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap.min.css
+[2024-04-15 14:27:18,718] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap-tweaks.css
+[2024-04-15 14:27:18,720] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+[2024-04-15 14:27:18,723] WARNING django.request (241) Not Found: /static/static/rest_framework/css/prettify.css
+[2024-04-15 14:27:18,723] WARNING django.server (212) "GET /static/static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+[2024-04-15 14:27:18,724] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:27:18,787] WARNING django.request (241) Not Found: /static/static/rest_framework/css/default.css
+[2024-04-15 14:27:18,788] WARNING django.server (212) "GET /static/static/rest_framework/css/default.css HTTP/1.1" 404 179
+[2024-04-15 14:27:18,794] WARNING django.request (241) Not Found: /static/static/rest_framework/js/jquery-3.7.1.min.js
+[2024-04-15 14:27:18,795] WARNING django.server (212) "GET /static/static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+[2024-04-15 14:27:18,796] WARNING django.request (241) Not Found: /static/static/rest_framework/js/ajax-form.js
+[2024-04-15 14:27:18,797] WARNING django.server (212) "GET /static/static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:27:18,814] WARNING django.request (241) Not Found: /static/static/rest_framework/js/csrf.js
+[2024-04-15 14:27:18,815] WARNING django.server (212) "GET /static/static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+[2024-04-15 14:27:18,830] WARNING django.request (241) Not Found: /static/static/rest_framework/js/bootstrap.min.js
+[2024-04-15 14:27:18,831] WARNING django.server (212) "GET /static/static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:27:18,857] WARNING django.request (241) Not Found: /static/static/rest_framework/js/prettify-min.js
+[2024-04-15 14:27:18,858] WARNING django.server (212) "GET /static/static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+[2024-04-15 14:27:18,885] WARNING django.request (241) Not Found: /static/static/rest_framework/js/default.js
+[2024-04-15 14:27:18,886] WARNING django.server (212) "GET /static/static/rest_framework/js/default.js HTTP/1.1" 404 179
+[2024-04-15 14:27:18,887] WARNING django.request (241) Not Found: /static/static/rest_framework/js/load-ajax-form.js
+[2024-04-15 14:27:18,889] WARNING django.server (212) "GET /static/static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:27:21,841] INFO django.server (212) "GET /api/?format=api HTTP/1.1" 200 14862
+[2024-04-15 14:27:21,945] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap.min.css
+[2024-04-15 14:27:21,955] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:27:21,963] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap-tweaks.css
+[2024-04-15 14:27:21,966] WARNING django.request (241) Not Found: /static/static/rest_framework/css/default.css
+[2024-04-15 14:27:21,971] WARNING django.request (241) Not Found: /static/static/rest_framework/css/prettify.css
+[2024-04-15 14:27:21,972] WARNING django.server (212) "GET /static/static/rest_framework/css/default.css HTTP/1.1" 404 179
+[2024-04-15 14:27:21,974] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+[2024-04-15 14:27:21,977] WARNING django.request (241) Not Found: /static/static/rest_framework/js/jquery-3.7.1.min.js
+[2024-04-15 14:27:21,978] WARNING django.server (212) "GET /static/static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+[2024-04-15 14:27:21,988] WARNING django.server (212) "GET /static/static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+[2024-04-15 14:27:21,993] WARNING django.request (241) Not Found: /static/static/rest_framework/js/ajax-form.js
+[2024-04-15 14:27:22,000] WARNING django.request (241) Not Found: /static/static/rest_framework/js/csrf.js
+[2024-04-15 14:27:22,003] WARNING django.server (212) "GET /static/static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+[2024-04-15 14:27:22,004] WARNING django.server (212) "GET /static/static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:27:22,041] WARNING django.request (241) Not Found: /static/static/rest_framework/js/bootstrap.min.js
+[2024-04-15 14:27:22,045] WARNING django.request (241) Not Found: /static/static/rest_framework/js/default.js
+[2024-04-15 14:27:22,047] WARNING django.request (241) Not Found: /static/static/rest_framework/js/load-ajax-form.js
+[2024-04-15 14:27:22,043] WARNING django.request (241) Not Found: /static/static/rest_framework/js/prettify-min.js
+[2024-04-15 14:27:22,051] WARNING django.server (212) "GET /static/static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:27:22,053] WARNING django.server (212) "GET /static/static/rest_framework/js/default.js HTTP/1.1" 404 179
+[2024-04-15 14:27:22,054] WARNING django.server (212) "GET /static/static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+[2024-04-15 14:27:22,057] WARNING django.server (212) "GET /static/static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:27:22,908] INFO django.server (212) "GET /api/?format=json HTTP/1.1" 200 6752
+[2024-04-15 14:27:37,794] INFO django.utils.autoreload (266) /app/api/views.py changed, reloading.
+[2024-04-15 14:27:38,540] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:27:46,169] INFO django.server (212) "GET /api/ HTTP/1.1" 200 14807
+[2024-04-15 14:27:46,229] WARNING django.request (241) Not Found: /static/static/rest_framework/css/prettify.css
+[2024-04-15 14:27:46,231] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap-tweaks.css
+[2024-04-15 14:27:46,234] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap.min.css
+[2024-04-15 14:27:46,246] WARNING django.request (241) Not Found: /static/static/rest_framework/css/default.css
+[2024-04-15 14:27:46,248] WARNING django.request (241) Not Found: /static/static/rest_framework/js/jquery-3.7.1.min.js
+[2024-04-15 14:27:46,251] WARNING django.request (241) Not Found: /static/static/rest_framework/js/ajax-form.js
+[2024-04-15 14:27:46,252] WARNING django.server (212) "GET /static/static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+[2024-04-15 14:27:46,252] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:27:46,263] WARNING django.server (212) "GET /static/static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+[2024-04-15 14:27:46,264] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+[2024-04-15 14:27:46,265] WARNING django.server (212) "GET /static/static/rest_framework/css/default.css HTTP/1.1" 404 179
+[2024-04-15 14:27:46,266] WARNING django.server (212) "GET /static/static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:27:46,290] WARNING django.request (241) Not Found: /static/static/rest_framework/js/csrf.js
+[2024-04-15 14:27:46,290] WARNING django.server (212) "GET /static/static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+[2024-04-15 14:27:46,294] WARNING django.request (241) Not Found: /static/static/rest_framework/js/bootstrap.min.js
+[2024-04-15 14:27:46,294] WARNING django.server (212) "GET /static/static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:27:46,308] WARNING django.request (241) Not Found: /static/static/rest_framework/js/prettify-min.js
+[2024-04-15 14:27:46,311] WARNING django.request (241) Not Found: /static/static/rest_framework/js/default.js
+[2024-04-15 14:27:46,314] WARNING django.request (241) Not Found: /static/static/rest_framework/js/load-ajax-form.js
+[2024-04-15 14:27:46,315] WARNING django.server (212) "GET /static/static/rest_framework/js/default.js HTTP/1.1" 404 179
+[2024-04-15 14:27:46,317] WARNING django.server (212) "GET /static/static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+[2024-04-15 14:27:46,320] WARNING django.server (212) "GET /static/static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:27:47,711] INFO django.server (212) "GET /api/?format=json HTTP/1.1" 200 6752
+[2024-04-15 14:27:49,521] INFO django.server (212) "GET /api/?format=json HTTP/1.1" 200 6752
+[2024-04-15 14:27:53,272] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 14:27:53,526] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 7534
+[2024-04-15 14:30:15,261] INFO django.utils.autoreload (266) /app/api/urls.py changed, reloading.
+[2024-04-15 14:30:16,170] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:31:47,265] INFO django.utils.autoreload (266) /app/api/views.py changed, reloading.
+[2024-04-15 14:31:48,137] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:31:55,002] INFO django.server (212) "GET /api/ HTTP/1.1" 200 14807
+[2024-04-15 14:31:55,104] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap.min.css
+[2024-04-15 14:31:55,107] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:31:55,109] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap-tweaks.css
+[2024-04-15 14:31:55,117] WARNING django.request (241) Not Found: /static/static/rest_framework/css/prettify.css
+[2024-04-15 14:31:55,119] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+[2024-04-15 14:31:55,125] WARNING django.server (212) "GET /static/static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+[2024-04-15 14:31:55,178] WARNING django.request (241) Not Found: /static/static/rest_framework/css/default.css
+[2024-04-15 14:31:55,179] WARNING django.server (212) "GET /static/static/rest_framework/css/default.css HTTP/1.1" 404 179
+[2024-04-15 14:31:55,183] WARNING django.request (241) Not Found: /static/static/rest_framework/js/jquery-3.7.1.min.js
+[2024-04-15 14:31:55,185] WARNING django.request (241) Not Found: /static/static/rest_framework/js/ajax-form.js
+[2024-04-15 14:31:55,186] WARNING django.server (212) "GET /static/static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+[2024-04-15 14:31:55,192] WARNING django.server (212) "GET /static/static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:31:55,201] WARNING django.request (241) Not Found: /static/static/rest_framework/js/csrf.js
+[2024-04-15 14:31:55,207] WARNING django.request (241) Not Found: /static/static/rest_framework/js/prettify-min.js
+[2024-04-15 14:31:55,209] WARNING django.request (241) Not Found: /static/static/rest_framework/js/load-ajax-form.js
+[2024-04-15 14:31:55,212] WARNING django.request (241) Not Found: /static/static/rest_framework/js/bootstrap.min.js
+[2024-04-15 14:31:55,215] WARNING django.request (241) Not Found: /static/static/rest_framework/js/default.js
+[2024-04-15 14:31:55,219] WARNING django.server (212) "GET /static/static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:31:55,227] WARNING django.server (212) "GET /static/static/rest_framework/js/default.js HTTP/1.1" 404 179
+[2024-04-15 14:31:55,227] WARNING django.server (212) "GET /static/static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+[2024-04-15 14:31:55,227] WARNING django.server (212) "GET /static/static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+[2024-04-15 14:31:55,229] WARNING django.server (212) "GET /static/static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:31:59,905] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 14:32:00,113] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 7534
+[2024-04-15 14:32:05,680] INFO django.server (212) "GET /api/ HTTP/1.1" 200 6752
+[2024-04-15 14:32:21,558] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 14:32:21,768] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 3090
+[2024-04-15 14:34:48,392] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:34:53,069] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 14:34:53,217] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 3090
+[2024-04-15 14:37:23,948] INFO django.utils.autoreload (266) /app/api/views.py changed, reloading.
+[2024-04-15 14:37:24,780] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:38:03,966] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2024-04-15 14:38:07,379] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 14:38:07,724] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 5984
+[2024-04-15 14:39:09,425] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 14:39:09,608] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 14036
+[2024-04-15 14:39:18,762] INFO django.server (212) "GET /api/ HTTP/1.1" 200 6752
+[2024-04-15 14:39:28,266] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 14:39:28,467] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 5984
+[2024-04-15 14:39:28,641] INFO django.server (212) "GET /api/schema/redoc/ HTTP/1.1" 200 733
+[2024-04-15 14:39:28,816] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 5984
+[2024-04-15 14:39:29,644] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 5984
+[2024-04-15 14:39:30,128] INFO django.server (212) "GET /api/ HTTP/1.1" 200 17207
+[2024-04-15 14:39:30,195] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap.min.css
+[2024-04-15 14:39:30,197] WARNING django.request (241) Not Found: /static/static/rest_framework/css/bootstrap-tweaks.css
+[2024-04-15 14:39:30,202] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:39:30,204] WARNING django.request (241) Not Found: /static/static/rest_framework/css/prettify.css
+[2024-04-15 14:39:30,205] WARNING django.server (212) "GET /static/static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 404 179
+[2024-04-15 14:39:30,207] WARNING django.server (212) "GET /static/static/rest_framework/css/prettify.css HTTP/1.1" 404 179
+[2024-04-15 14:39:30,243] WARNING django.request (241) Not Found: /static/static/rest_framework/css/default.css
+[2024-04-15 14:39:30,244] WARNING django.server (212) "GET /static/static/rest_framework/css/default.css HTTP/1.1" 404 179
+[2024-04-15 14:39:30,252] WARNING django.request (241) Not Found: /static/static/rest_framework/js/jquery-3.7.1.min.js
+[2024-04-15 14:39:30,253] WARNING django.server (212) "GET /static/static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,256] WARNING django.request (241) Not Found: /static/static/rest_framework/js/ajax-form.js
+[2024-04-15 14:39:30,257] WARNING django.server (212) "GET /static/static/rest_framework/js/ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,270] WARNING django.request (241) Not Found: /static/static/rest_framework/js/csrf.js
+[2024-04-15 14:39:30,270] WARNING django.server (212) "GET /static/static/rest_framework/js/csrf.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,274] WARNING django.request (241) Not Found: /static/static/rest_framework/js/bootstrap.min.js
+[2024-04-15 14:39:30,274] WARNING django.server (212) "GET /static/static/rest_framework/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,294] WARNING django.request (241) Not Found: /static/static/rest_framework/js/prettify-min.js
+[2024-04-15 14:39:30,296] WARNING django.server (212) "GET /static/static/rest_framework/js/prettify-min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,322] WARNING django.request (241) Not Found: /static/static/rest_framework/js/default.js
+[2024-04-15 14:39:30,323] WARNING django.server (212) "GET /static/static/rest_framework/js/default.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,353] WARNING django.request (241) Not Found: /static/static/rest_framework/js/load-ajax-form.js
+[2024-04-15 14:39:30,357] WARNING django.server (212) "GET /static/static/rest_framework/js/load-ajax-form.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,652] INFO django.server (212) "GET / HTTP/1.1" 200 11276
+[2024-04-15 14:39:30,717] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:39:30,719] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:39:30,725] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:39:30,726] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:39:30,727] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:39:30,728] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:39:30,729] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:39:30,731] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:39:30,730] WARNING django.request (241) Not Found: /static/static/img/slider001.jpg
+[2024-04-15 14:39:30,732] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:39:30,765] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:39:30,766] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,767] WARNING django.request (241) Not Found: /static/static/img/slider002.jpg
+[2024-04-15 14:39:30,768] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:39:30,771] WARNING django.request (241) Not Found: /static/static/img/slider003.jpg
+[2024-04-15 14:39:30,771] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:39:30,779] WARNING django.request (241) Not Found: /static/static/img/user001.png
+[2024-04-15 14:39:30,779] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 179
+[2024-04-15 14:39:30,818] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:39:30,820] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,824] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:39:30,825] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,831] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:39:30,832] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,872] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:39:30,873] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:30,881] WARNING django.request (241) Not Found: /static/static/img/user002.png
+[2024-04-15 14:39:30,882] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 179
+[2024-04-15 14:39:30,891] WARNING django.request (241) Not Found: /static/static/img/user003.png
+[2024-04-15 14:39:30,892] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 179
+[2024-04-15 14:39:30,929] WARNING django.request (241) Not Found: /static/static/img/promo001.jpg
+[2024-04-15 14:39:30,930] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:39:31,046] WARNING django.request (241) Not Found: /static/static/img/promo002.jpg
+[2024-04-15 14:39:31,047] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:39:31,057] WARNING django.request (241) Not Found: /static/static/img/promo003.jpg
+[2024-04-15 14:39:31,058] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:39:32,632] INFO django.server (212) "GET /news/ HTTP/1.1" 200 10390
+[2024-04-15 14:39:32,708] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:39:32,709] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:39:32,717] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:39:32,720] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:39:32,726] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:39:32,730] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:39:32,738] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:32,742] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:39:32,743] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:39:32,751] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:39:32,781] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:39:32,782] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:32,789] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:39:32,794] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:39:32,798] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:39:32,801] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:32,807] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:32,817] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:44,425] INFO django.server (212) "GET /news/?page=2 HTTP/1.1" 200 7756
+[2024-04-15 14:39:44,502] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:39:44,507] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:39:44,505] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:39:44,509] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:39:44,510] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:39:44,516] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:39:44,516] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:39:44,518] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:39:44,522] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:39:44,522] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:39:44,526] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:44,529] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:44,563] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:39:44,568] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:39:44,569] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:44,574] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:39:44,586] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:39:44,588] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:40,668] INFO django.server (212) "GET /news/?page=2 HTTP/1.1" 200 7756
+[2024-04-15 14:40:40,735] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:40:40,738] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:40:40,741] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:40:40,745] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:40:40,746] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:40:40,748] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:40:40,758] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:40:40,760] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:40:40,762] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:40:40,763] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:40,766] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:40:40,768] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:40,775] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:40:40,777] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:40,796] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:40:40,798] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:40,801] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:40:40,802] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:43,135] INFO django.server (212) "GET /news/?page=1 HTTP/1.1" 200 10390
+[2024-04-15 14:40:43,190] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:40:43,195] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:40:43,197] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:40:43,199] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:40:43,207] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:40:43,203] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:40:43,209] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:40:43,201] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:40:43,212] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:40:43,214] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:43,246] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:40:43,248] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:43,284] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:40:43,290] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:43,303] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:40:43,304] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:43,321] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:40:43,322] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:45,217] INFO django.server (212) "GET /news/?page=1 HTTP/1.1" 200 10390
+[2024-04-15 14:40:45,298] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:40:45,300] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:40:45,307] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:40:45,312] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:40:45,315] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:40:45,318] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:40:45,331] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:40:45,338] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:40:45,340] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:40:45,384] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:45,404] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:40:45,405] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:45,409] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:40:45,410] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:45,420] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:40:45,421] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:40:45,442] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:40:45,446] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:22,511] INFO django.server (212) "POST /api/ HTTP/1.1" 201 177
+[2024-04-15 14:41:39,202] INFO django.server (212) "GET /news/?page=1 HTTP/1.1" 200 10244
+[2024-04-15 14:41:39,273] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:41:39,273] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:39,285] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:41:39,291] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:41:39,293] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:41:39,295] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:41:39,299] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:41:39,301] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:39,306] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:39,311] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:39,316] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:41:39,317] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:41:39,322] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:39,324] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:39,380] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:41:39,384] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:41:39,385] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:39,387] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:40,796] INFO django.server (212) "GET /news/7/detail HTTP/1.1" 200 6043
+[2024-04-15 14:41:40,921] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:41:40,925] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:41:40,926] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:40,928] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:40,935] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:41:40,936] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:40,939] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:41:40,942] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:41:40,943] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:41:40,944] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:40,948] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:41:40,954] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:40,992] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:41:40,993] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:41,010] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:41:41,017] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:41:41,017] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:41,018] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:44,951] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 8075
+[2024-04-15 14:41:45,025] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:41:45,030] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:45,034] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:41:45,036] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:45,048] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:41:45,055] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:41:45,061] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:45,060] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:41:45,062] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:41:45,069] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:45,111] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:41:45,115] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:45,142] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:41:45,142] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:45,164] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:41:45,164] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:45,167] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:41:45,168] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:48,816] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2024-04-15 14:41:48,851] INFO django.server (212) "GET / HTTP/1.1" 200 13100
+[2024-04-15 14:41:48,887] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:41:48,887] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:48,894] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:41:48,895] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:48,897] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:41:48,898] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:41:48,900] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:41:48,903] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:41:48,902] WARNING django.request (241) Not Found: /static/static/img/slider001.jpg
+[2024-04-15 14:41:48,904] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:41:48,925] WARNING django.request (241) Not Found: /static/static/img/slider002.jpg
+[2024-04-15 14:41:48,928] WARNING django.request (241) Not Found: /static/static/img/slider003.jpg
+[2024-04-15 14:41:48,928] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:41:48,929] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:41:48,931] WARNING django.request (241) Not Found: /static/static/img/user001.png
+[2024-04-15 14:41:48,932] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 179
+[2024-04-15 14:41:48,934] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:41:48,935] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:48,939] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:41:48,943] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:48,955] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:41:48,957] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:48,966] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:41:48,968] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:48,993] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:41:48,995] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:41:49,002] WARNING django.request (241) Not Found: /static/static/img/user002.png
+[2024-04-15 14:41:49,003] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 179
+[2024-04-15 14:41:49,007] WARNING django.request (241) Not Found: /static/static/img/user003.png
+[2024-04-15 14:41:49,010] WARNING django.request (241) Not Found: /static/static/img/promo001.jpg
+[2024-04-15 14:41:49,011] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 179
+[2024-04-15 14:41:49,011] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:41:49,016] WARNING django.request (241) Not Found: /static/static/img/promo002.jpg
+[2024-04-15 14:41:49,017] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:41:49,020] WARNING django.request (241) Not Found: /static/static/img/promo003.jpg
+[2024-04-15 14:41:49,021] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:41:57,188] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 8176
+[2024-04-15 14:41:57,328] WARNING django.request (241) Not Found: /static/static/admin/css/base.css
+[2024-04-15 14:41:57,332] WARNING django.request (241) Not Found: /static/static/admin/css/dark_mode.css
+[2024-04-15 14:41:57,333] WARNING django.server (212) "GET /static/static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2024-04-15 14:41:57,334] WARNING django.server (212) "GET /static/static/admin/css/base.css HTTP/1.1" 404 179
+[2024-04-15 14:41:57,340] WARNING django.request (241) Not Found: /static/static/admin/css/nav_sidebar.css
+[2024-04-15 14:41:57,342] WARNING django.request (241) Not Found: /static/static/admin/css/dashboard.css
+[2024-04-15 14:41:57,343] WARNING django.request (241) Not Found: /static/static/admin/css/responsive.css
+[2024-04-15 14:41:57,345] WARNING django.server (212) "GET /static/static/admin/css/responsive.css HTTP/1.1" 404 179
+[2024-04-15 14:41:57,345] WARNING django.server (212) "GET /static/static/admin/css/dashboard.css HTTP/1.1" 404 179
+[2024-04-15 14:41:57,346] WARNING django.server (212) "GET /static/static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2024-04-15 14:41:57,388] WARNING django.request (241) Not Found: /static/static/admin/js/theme.js
+[2024-04-15 14:41:57,391] WARNING django.request (241) Not Found: /static/static/admin/js/nav_sidebar.js
+[2024-04-15 14:41:57,392] WARNING django.server (212) "GET /static/static/admin/js/theme.js HTTP/1.1" 404 179
+[2024-04-15 14:41:57,392] WARNING django.server (212) "GET /static/static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2024-04-15 14:42:10,501] INFO django.server (212) "GET /admin/mainapp/lesson/ HTTP/1.1" 200 21332
+[2024-04-15 14:42:10,603] WARNING django.request (241) Not Found: /static/static/admin/css/base.css
+[2024-04-15 14:42:10,612] WARNING django.request (241) Not Found: /static/static/admin/css/dark_mode.css
+[2024-04-15 14:42:10,621] WARNING django.request (241) Not Found: /static/static/admin/css/nav_sidebar.css
+[2024-04-15 14:42:10,624] WARNING django.server (212) "GET /static/static/admin/css/base.css HTTP/1.1" 404 179
+[2024-04-15 14:42:10,627] WARNING django.server (212) "GET /static/static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2024-04-15 14:42:10,630] WARNING django.request (241) Not Found: /static/static/admin/css/changelists.css
+[2024-04-15 14:42:10,637] WARNING django.request (241) Not Found: /static/static/admin/js/vendor/jquery/jquery.min.js
+[2024-04-15 14:42:10,638] WARNING django.server (212) "GET /static/static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:10,642] WARNING django.request (241) Not Found: /static/static/admin/js/jquery.init.js
+[2024-04-15 14:42:10,643] WARNING django.server (212) "GET /static/static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[2024-04-15 14:42:10,645] WARNING django.server (212) "GET /static/static/admin/css/changelists.css HTTP/1.1" 404 179
+[2024-04-15 14:42:10,646] WARNING django.server (212) "GET /static/static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2024-04-15 14:42:10,662] WARNING django.request (241) Not Found: /static/static/admin/css/responsive.css
+[2024-04-15 14:42:10,665] WARNING django.request (241) Not Found: /static/static/admin/js/core.js
+[2024-04-15 14:42:10,669] WARNING django.server (212) "GET /static/static/admin/js/core.js HTTP/1.1" 404 179
+[2024-04-15 14:42:10,671] WARNING django.server (212) "GET /static/static/admin/css/responsive.css HTTP/1.1" 404 179
+[2024-04-15 14:42:10,678] WARNING django.request (241) Not Found: /static/static/admin/js/admin/RelatedObjectLookups.js
+[2024-04-15 14:42:10,681] WARNING django.server (212) "GET /static/static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[2024-04-15 14:42:10,687] WARNING django.request (241) Not Found: /static/static/admin/js/actions.js
+[2024-04-15 14:42:10,697] WARNING django.request (241) Not Found: /static/static/admin/js/urlify.js
+[2024-04-15 14:42:10,701] WARNING django.server (212) "GET /static/static/admin/js/actions.js HTTP/1.1" 404 179
+[2024-04-15 14:42:10,706] WARNING django.server (212) "GET /static/static/admin/js/urlify.js HTTP/1.1" 404 179
+[2024-04-15 14:42:10,709] WARNING django.request (241) Not Found: /static/static/admin/js/prepopulate.js
+[2024-04-15 14:42:10,710] WARNING django.server (212) "GET /static/static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[2024-04-15 14:42:10,713] INFO django.server (212) "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-04-15 14:42:10,715] WARNING django.request (241) Not Found: /static/static/admin/js/vendor/xregexp/xregexp.min.js
+[2024-04-15 14:42:10,715] WARNING django.server (212) "GET /static/static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:10,734] WARNING django.request (241) Not Found: /static/static/admin/img/icon-no.svg
+[2024-04-15 14:42:10,734] WARNING django.server (212) "GET /static/static/admin/img/icon-no.svg HTTP/1.1" 404 179
+[2024-04-15 14:42:10,771] WARNING django.request (241) Not Found: /static/static/admin/js/theme.js
+[2024-04-15 14:42:10,772] WARNING django.request (241) Not Found: /static/static/admin/js/nav_sidebar.js
+[2024-04-15 14:42:10,774] WARNING django.request (241) Not Found: /static/static/admin/js/filters.js
+[2024-04-15 14:42:10,775] WARNING django.request (241) Not Found: /static/static/admin/css/responsive.css
+[2024-04-15 14:42:10,777] WARNING django.server (212) "GET /static/static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2024-04-15 14:42:10,777] WARNING django.server (212) "GET /static/static/admin/js/filters.js HTTP/1.1" 404 179
+[2024-04-15 14:42:10,778] WARNING django.server (212) "GET /static/static/admin/css/responsive.css HTTP/1.1" 404 179
+[2024-04-15 14:42:10,778] WARNING django.server (212) "GET /static/static/admin/js/theme.js HTTP/1.1" 404 179
+[2024-04-15 14:42:13,951] INFO django.server (212) "GET /admin/social_django/association/ HTTP/1.1" 200 9748
+[2024-04-15 14:42:14,064] WARNING django.request (241) Not Found: /static/static/admin/css/base.css
+[2024-04-15 14:42:14,067] WARNING django.request (241) Not Found: /static/static/admin/css/dark_mode.css
+[2024-04-15 14:42:14,068] WARNING django.server (212) "GET /static/static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2024-04-15 14:42:14,070] WARNING django.server (212) "GET /static/static/admin/css/base.css HTTP/1.1" 404 179
+[2024-04-15 14:42:14,085] WARNING django.request (241) Not Found: /static/static/admin/css/nav_sidebar.css
+[2024-04-15 14:42:14,088] WARNING django.request (241) Not Found: /static/static/admin/js/vendor/jquery/jquery.min.js
+[2024-04-15 14:42:14,090] WARNING django.request (241) Not Found: /static/static/admin/css/changelists.css
+[2024-04-15 14:42:14,097] WARNING django.server (212) "GET /static/static/admin/css/changelists.css HTTP/1.1" 404 179
+[2024-04-15 14:42:14,099] WARNING django.server (212) "GET /static/static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:14,092] WARNING django.server (212) "GET /static/static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2024-04-15 14:42:14,110] WARNING django.request (241) Not Found: /static/static/admin/css/responsive.css
+[2024-04-15 14:42:14,130] WARNING django.request (241) Not Found: /static/static/admin/js/admin/RelatedObjectLookups.js
+[2024-04-15 14:42:14,138] WARNING django.request (241) Not Found: /static/static/admin/js/actions.js
+[2024-04-15 14:42:14,143] WARNING django.request (241) Not Found: /static/static/admin/js/jquery.init.js
+[2024-04-15 14:42:14,147] WARNING django.request (241) Not Found: /static/static/admin/js/core.js
+[2024-04-15 14:42:14,155] WARNING django.server (212) "GET /static/static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[2024-04-15 14:42:14,155] WARNING django.server (212) "GET /static/static/admin/css/responsive.css HTTP/1.1" 404 179
+[2024-04-15 14:42:14,158] WARNING django.server (212) "GET /static/static/admin/js/actions.js HTTP/1.1" 404 179
+[2024-04-15 14:42:14,161] INFO django.server (212) "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-04-15 14:42:14,161] WARNING django.server (212) "GET /static/static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[2024-04-15 14:42:14,165] WARNING django.server (212) "GET /static/static/admin/js/core.js HTTP/1.1" 404 179
+[2024-04-15 14:42:14,177] WARNING django.request (241) Not Found: /static/static/admin/js/prepopulate.js
+[2024-04-15 14:42:14,178] WARNING django.server (212) "GET /static/static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[2024-04-15 14:42:14,183] WARNING django.request (241) Not Found: /static/static/admin/js/urlify.js
+[2024-04-15 14:42:14,184] WARNING django.server (212) "GET /static/static/admin/js/urlify.js HTTP/1.1" 404 179
+[2024-04-15 14:42:14,202] WARNING django.request (241) Not Found: /static/static/admin/js/vendor/xregexp/xregexp.min.js
+[2024-04-15 14:42:14,202] WARNING django.server (212) "GET /static/static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:14,217] WARNING django.request (241) Not Found: /static/static/admin/img/search.svg
+[2024-04-15 14:42:14,217] WARNING django.server (212) "GET /static/static/admin/img/search.svg HTTP/1.1" 404 179
+[2024-04-15 14:42:14,279] WARNING django.request (241) Not Found: /static/static/admin/js/theme.js
+[2024-04-15 14:42:14,280] WARNING django.server (212) "GET /static/static/admin/js/theme.js HTTP/1.1" 404 179
+[2024-04-15 14:42:14,294] WARNING django.request (241) Not Found: /static/static/admin/css/responsive.css
+[2024-04-15 14:42:14,295] WARNING django.server (212) "GET /static/static/admin/css/responsive.css HTTP/1.1" 404 179
+[2024-04-15 14:42:14,298] WARNING django.request (241) Not Found: /static/static/admin/js/nav_sidebar.js
+[2024-04-15 14:42:14,300] WARNING django.server (212) "GET /static/static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2024-04-15 14:42:14,303] WARNING django.request (241) Not Found: /static/static/admin/js/filters.js
+[2024-04-15 14:42:14,304] WARNING django.server (212) "GET /static/static/admin/js/filters.js HTTP/1.1" 404 179
+[2024-04-15 14:42:16,636] INFO django.server (212) "GET /admin/social_django/usersocialauth/ HTTP/1.1" 200 9775
+[2024-04-15 14:42:16,698] WARNING django.request (241) Not Found: /static/static/admin/css/base.css
+[2024-04-15 14:42:16,700] WARNING django.server (212) "GET /static/static/admin/css/base.css HTTP/1.1" 404 179
+[2024-04-15 14:42:16,705] WARNING django.request (241) Not Found: /static/static/admin/css/dark_mode.css
+[2024-04-15 14:42:16,707] WARNING django.server (212) "GET /static/static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2024-04-15 14:42:16,719] WARNING django.request (241) Not Found: /static/static/admin/css/nav_sidebar.css
+[2024-04-15 14:42:16,722] WARNING django.request (241) Not Found: /static/static/admin/css/changelists.css
+[2024-04-15 14:42:16,724] WARNING django.request (241) Not Found: /static/static/admin/js/vendor/jquery/jquery.min.js
+[2024-04-15 14:42:16,730] WARNING django.server (212) "GET /static/static/admin/css/changelists.css HTTP/1.1" 404 179
+[2024-04-15 14:42:16,731] WARNING django.server (212) "GET /static/static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2024-04-15 14:42:16,734] WARNING django.server (212) "GET /static/static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:16,741] WARNING django.request (241) Not Found: /static/static/admin/css/responsive.css
+[2024-04-15 14:42:16,741] WARNING django.server (212) "GET /static/static/admin/css/responsive.css HTTP/1.1" 404 179
+[2024-04-15 14:42:16,753] WARNING django.request (241) Not Found: /static/static/admin/js/jquery.init.js
+[2024-04-15 14:42:16,756] WARNING django.server (212) "GET /static/static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[2024-04-15 14:42:16,771] WARNING django.request (241) Not Found: /static/static/admin/js/core.js
+[2024-04-15 14:42:16,775] WARNING django.request (241) Not Found: /static/static/admin/js/admin/RelatedObjectLookups.js
+[2024-04-15 14:42:16,779] WARNING django.server (212) "GET /static/static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[2024-04-15 14:42:16,779] WARNING django.server (212) "GET /static/static/admin/js/core.js HTTP/1.1" 404 179
+[2024-04-15 14:42:16,785] WARNING django.request (241) Not Found: /static/static/admin/js/actions.js
+[2024-04-15 14:42:16,786] WARNING django.server (212) "GET /static/static/admin/js/actions.js HTTP/1.1" 404 179
+[2024-04-15 14:42:16,791] INFO django.server (212) "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-04-15 14:42:16,811] WARNING django.request (241) Not Found: /static/static/admin/js/urlify.js
+[2024-04-15 14:42:16,817] WARNING django.request (241) Not Found: /static/static/admin/js/prepopulate.js
+[2024-04-15 14:42:16,819] WARNING django.request (241) Not Found: /static/static/admin/js/vendor/xregexp/xregexp.min.js
+[2024-04-15 14:42:16,822] WARNING django.server (212) "GET /static/static/admin/js/urlify.js HTTP/1.1" 404 179
+[2024-04-15 14:42:16,825] WARNING django.server (212) "GET /static/static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[2024-04-15 14:42:16,826] WARNING django.server (212) "GET /static/static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:16,857] WARNING django.request (241) Not Found: /static/static/admin/img/search.svg
+[2024-04-15 14:42:16,858] WARNING django.server (212) "GET /static/static/admin/img/search.svg HTTP/1.1" 404 179
+[2024-04-15 14:42:16,882] WARNING django.request (241) Not Found: /static/static/admin/js/theme.js
+[2024-04-15 14:42:16,883] WARNING django.request (241) Not Found: /static/static/admin/css/responsive.css
+[2024-04-15 14:42:16,885] WARNING django.request (241) Not Found: /static/static/admin/js/nav_sidebar.js
+[2024-04-15 14:42:16,888] WARNING django.request (241) Not Found: /static/static/admin/js/filters.js
+[2024-04-15 14:42:16,889] WARNING django.server (212) "GET /static/static/admin/js/theme.js HTTP/1.1" 404 179
+[2024-04-15 14:42:16,894] WARNING django.server (212) "GET /static/static/admin/css/responsive.css HTTP/1.1" 404 179
+[2024-04-15 14:42:16,894] WARNING django.server (212) "GET /static/static/admin/js/filters.js HTTP/1.1" 404 179
+[2024-04-15 14:42:16,899] WARNING django.server (212) "GET /static/static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2024-04-15 14:42:18,295] INFO django.server (212) "GET /admin/auth/group/ HTTP/1.1" 200 9386
+[2024-04-15 14:42:18,362] WARNING django.request (241) Not Found: /static/static/admin/css/dark_mode.css
+[2024-04-15 14:42:18,364] WARNING django.request (241) Not Found: /static/static/admin/css/nav_sidebar.css
+[2024-04-15 14:42:18,369] WARNING django.request (241) Not Found: /static/static/admin/css/base.css
+[2024-04-15 14:42:18,366] WARNING django.request (241) Not Found: /static/static/admin/css/changelists.css
+[2024-04-15 14:42:18,373] WARNING django.server (212) "GET /static/static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2024-04-15 14:42:18,375] WARNING django.request (241) Not Found: /static/static/admin/js/vendor/jquery/jquery.min.js
+[2024-04-15 14:42:18,377] WARNING django.server (212) "GET /static/static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2024-04-15 14:42:18,378] WARNING django.server (212) "GET /static/static/admin/css/base.css HTTP/1.1" 404 179
+[2024-04-15 14:42:18,379] WARNING django.server (212) "GET /static/static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:18,383] WARNING django.server (212) "GET /static/static/admin/css/changelists.css HTTP/1.1" 404 179
+[2024-04-15 14:42:18,401] INFO django.server (212) "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2024-04-15 14:42:18,418] WARNING django.request (241) Not Found: /static/static/admin/css/responsive.css
+[2024-04-15 14:42:18,422] WARNING django.request (241) Not Found: /static/static/admin/js/admin/RelatedObjectLookups.js
+[2024-04-15 14:42:18,424] WARNING django.request (241) Not Found: /static/static/admin/js/core.js
+[2024-04-15 14:42:18,426] WARNING django.request (241) Not Found: /static/static/admin/js/actions.js
+[2024-04-15 14:42:18,429] WARNING django.request (241) Not Found: /static/static/admin/js/jquery.init.js
+[2024-04-15 14:42:18,433] WARNING django.server (212) "GET /static/static/admin/js/core.js HTTP/1.1" 404 179
+[2024-04-15 14:42:18,433] WARNING django.server (212) "GET /static/static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[2024-04-15 14:42:18,434] WARNING django.server (212) "GET /static/static/admin/css/responsive.css HTTP/1.1" 404 179
+[2024-04-15 14:42:18,437] WARNING django.server (212) "GET /static/static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[2024-04-15 14:42:18,438] WARNING django.server (212) "GET /static/static/admin/js/actions.js HTTP/1.1" 404 179
+[2024-04-15 14:42:18,479] WARNING django.request (241) Not Found: /static/static/admin/js/vendor/xregexp/xregexp.min.js
+[2024-04-15 14:42:18,482] WARNING django.request (241) Not Found: /static/static/admin/js/prepopulate.js
+[2024-04-15 14:42:18,486] WARNING django.server (212) "GET /static/static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:18,490] WARNING django.server (212) "GET /static/static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[2024-04-15 14:42:18,492] WARNING django.request (241) Not Found: /static/static/admin/js/urlify.js
+[2024-04-15 14:42:18,500] WARNING django.server (212) "GET /static/static/admin/js/urlify.js HTTP/1.1" 404 179
+[2024-04-15 14:42:18,514] WARNING django.request (241) Not Found: /static/static/admin/img/search.svg
+[2024-04-15 14:42:18,516] WARNING django.server (212) "GET /static/static/admin/img/search.svg HTTP/1.1" 404 179
+[2024-04-15 14:42:18,556] WARNING django.request (241) Not Found: /static/static/admin/js/theme.js
+[2024-04-15 14:42:18,558] WARNING django.server (212) "GET /static/static/admin/js/theme.js HTTP/1.1" 404 179
+[2024-04-15 14:42:18,563] WARNING django.request (241) Not Found: /static/static/admin/css/responsive.css
+[2024-04-15 14:42:18,564] WARNING django.request (241) Not Found: /static/static/admin/js/nav_sidebar.js
+[2024-04-15 14:42:18,566] WARNING django.request (241) Not Found: /static/static/admin/js/filters.js
+[2024-04-15 14:42:18,568] WARNING django.server (212) "GET /static/static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2024-04-15 14:42:18,569] WARNING django.server (212) "GET /static/static/admin/css/responsive.css HTTP/1.1" 404 179
+[2024-04-15 14:42:18,570] WARNING django.server (212) "GET /static/static/admin/js/filters.js HTTP/1.1" 404 179
+[2024-04-15 14:42:19,084] INFO django.server (212) "GET /admin/mainapp/ HTTP/1.1" 200 5119
+[2024-04-15 14:42:19,133] WARNING django.request (241) Not Found: /static/static/admin/css/base.css
+[2024-04-15 14:42:19,134] WARNING django.server (212) "GET /static/static/admin/css/base.css HTTP/1.1" 404 179
+[2024-04-15 14:42:19,153] WARNING django.request (241) Not Found: /static/static/admin/css/dark_mode.css
+[2024-04-15 14:42:19,154] WARNING django.server (212) "GET /static/static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2024-04-15 14:42:19,174] WARNING django.request (241) Not Found: /static/static/admin/css/nav_sidebar.css
+[2024-04-15 14:42:19,175] WARNING django.server (212) "GET /static/static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2024-04-15 14:42:19,178] WARNING django.request (241) Not Found: /static/static/admin/css/dashboard.css
+[2024-04-15 14:42:19,180] WARNING django.server (212) "GET /static/static/admin/css/dashboard.css HTTP/1.1" 404 179
+[2024-04-15 14:42:19,184] WARNING django.request (241) Not Found: /static/static/admin/css/responsive.css
+[2024-04-15 14:42:19,185] WARNING django.server (212) "GET /static/static/admin/css/responsive.css HTTP/1.1" 404 179
+[2024-04-15 14:42:19,190] WARNING django.request (241) Not Found: /static/static/admin/js/theme.js
+[2024-04-15 14:42:19,192] WARNING django.request (241) Not Found: /static/static/admin/js/nav_sidebar.js
+[2024-04-15 14:42:19,195] WARNING django.server (212) "GET /static/static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2024-04-15 14:42:19,196] WARNING django.server (212) "GET /static/static/admin/js/theme.js HTTP/1.1" 404 179
+[2024-04-15 14:42:21,685] INFO django.server (212) "GET / HTTP/1.1" 200 12238
+[2024-04-15 14:42:21,759] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:42:21,760] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:42:21,769] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:42:21,770] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:42:21,778] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:42:21,780] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:42:21,785] WARNING django.request (241) Not Found: /static/static/img/slider002.jpg
+[2024-04-15 14:42:21,785] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:42:21,787] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:42:21,789] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:42:21,793] WARNING django.request (241) Not Found: /static/static/img/slider001.jpg
+[2024-04-15 14:42:21,797] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:42:21,799] WARNING django.request (241) Not Found: /static/static/img/slider003.jpg
+[2024-04-15 14:42:21,800] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:42:21,806] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:42:21,808] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:21,872] WARNING django.request (241) Not Found: /static/static/img/user001.png
+[2024-04-15 14:42:21,874] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 179
+[2024-04-15 14:42:21,878] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:42:21,880] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:21,889] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:42:21,891] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:42:21,893] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:21,896] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:21,918] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:42:21,920] WARNING django.request (241) Not Found: /static/static/img/user002.png
+[2024-04-15 14:42:21,922] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 179
+[2024-04-15 14:42:21,927] WARNING django.request (241) Not Found: /static/static/img/user003.png
+[2024-04-15 14:42:21,929] WARNING django.request (241) Not Found: /static/static/img/promo001.jpg
+[2024-04-15 14:42:21,932] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 179
+[2024-04-15 14:42:21,933] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:21,934] WARNING django.request (241) Not Found: /static/static/img/promo002.jpg
+[2024-04-15 14:42:21,935] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:42:21,937] WARNING django.request (241) Not Found: /static/static/img/promo003.jpg
+[2024-04-15 14:42:21,939] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:42:21,940] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:42:23,348] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 8176
+[2024-04-15 14:42:23,463] WARNING django.request (241) Not Found: /static/static/admin/css/base.css
+[2024-04-15 14:42:23,464] WARNING django.server (212) "GET /static/static/admin/css/base.css HTTP/1.1" 404 179
+[2024-04-15 14:42:23,470] WARNING django.request (241) Not Found: /static/static/admin/css/nav_sidebar.css
+[2024-04-15 14:42:23,472] WARNING django.request (241) Not Found: /static/static/admin/css/responsive.css
+[2024-04-15 14:42:23,473] WARNING django.request (241) Not Found: /static/static/admin/css/dark_mode.css
+[2024-04-15 14:42:23,474] WARNING django.server (212) "GET /static/static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2024-04-15 14:42:23,476] WARNING django.request (241) Not Found: /static/static/admin/css/dashboard.css
+[2024-04-15 14:42:23,477] WARNING django.server (212) "GET /static/static/admin/css/responsive.css HTTP/1.1" 404 179
+[2024-04-15 14:42:23,477] WARNING django.server (212) "GET /static/static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2024-04-15 14:42:23,480] WARNING django.server (212) "GET /static/static/admin/css/dashboard.css HTTP/1.1" 404 179
+[2024-04-15 14:42:23,561] WARNING django.request (241) Not Found: /static/static/admin/js/theme.js
+[2024-04-15 14:42:23,561] WARNING django.server (212) "GET /static/static/admin/js/theme.js HTTP/1.1" 404 179
+[2024-04-15 14:42:23,571] WARNING django.request (241) Not Found: /static/static/admin/js/nav_sidebar.js
+[2024-04-15 14:42:23,572] WARNING django.server (212) "GET /static/static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2024-04-15 14:42:42,495] INFO django.server (212) "GET / HTTP/1.1" 200 12238
+[2024-04-15 14:42:42,604] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:42:42,609] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:42:42,613] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:42:42,614] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:42:42,617] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:42:42,619] WARNING django.request (241) Not Found: /static/static/img/slider002.jpg
+[2024-04-15 14:42:42,620] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:42:42,621] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:42:42,624] WARNING django.request (241) Not Found: /static/static/img/slider001.jpg
+[2024-04-15 14:42:42,627] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:42:42,631] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:42:42,632] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:42:42,682] WARNING django.request (241) Not Found: /static/static/img/slider003.jpg
+[2024-04-15 14:42:42,683] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:42:42,686] WARNING django.request (241) Not Found: /static/static/img/user001.png
+[2024-04-15 14:42:42,687] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:42:42,690] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:42:42,696] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:42,699] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:42,693] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:42:42,689] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:42:42,702] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:42,702] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:42,691] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 179
+[2024-04-15 14:42:42,725] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:42:42,728] WARNING django.request (241) Not Found: /static/static/img/user002.png
+[2024-04-15 14:42:42,729] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:42:42,731] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 179
+[2024-04-15 14:42:42,742] WARNING django.request (241) Not Found: /static/static/img/user003.png
+[2024-04-15 14:42:42,745] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 179
+[2024-04-15 14:42:42,751] WARNING django.request (241) Not Found: /static/static/img/promo001.jpg
+[2024-04-15 14:42:42,752] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:42:42,754] WARNING django.request (241) Not Found: /static/static/img/promo002.jpg
+[2024-04-15 14:42:42,754] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:42:42,756] WARNING django.request (241) Not Found: /static/static/img/promo003.jpg
+[2024-04-15 14:42:42,756] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:43:03,266] INFO django.server (212) "GET /api/schema/swagger-ui/ HTTP/1.1" 200 4650
+[2024-04-15 14:43:03,558] INFO django.server (212) "GET /api/schema/ HTTP/1.1" 200 14036
+[2024-04-15 14:43:13,295] INFO django.server (212) "GET /api/ HTTP/1.1" 200 6930
+[2024-04-15 14:43:14,312] INFO django.server (212) "GET /api/ HTTP/1.1" 200 6930
+[2024-04-15 14:43:31,839] INFO django.server (212) "DELETE /api/7/ HTTP/1.1" 204 0
+[2024-04-15 14:43:40,010] INFO django.server (212) "GET / HTTP/1.1" 200 12238
+[2024-04-15 14:43:40,074] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:43:40,075] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:43:40,082] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:43:40,083] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:43:40,087] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:43:40,088] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:43:40,090] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:43:40,095] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:43:40,094] WARNING django.request (241) Not Found: /static/static/img/slider002.jpg
+[2024-04-15 14:43:40,098] WARNING django.server (212) "GET /static/static/img/slider002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:43:40,093] WARNING django.request (241) Not Found: /static/static/img/slider001.jpg
+[2024-04-15 14:43:40,099] WARNING django.server (212) "GET /static/static/img/slider001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:43:40,109] WARNING django.request (241) Not Found: /static/static/img/slider003.jpg
+[2024-04-15 14:43:40,109] WARNING django.server (212) "GET /static/static/img/slider003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:43:40,124] WARNING django.request (241) Not Found: /static/static/img/user001.png
+[2024-04-15 14:43:40,126] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:43:40,126] WARNING django.server (212) "GET /static/static/img/user001.png HTTP/1.1" 404 179
+[2024-04-15 14:43:40,131] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:43:40,131] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:43:40,132] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:43:40,135] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:43:40,135] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
+[2024-04-15 14:43:40,139] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:43:40,142] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:43:40,156] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:43:40,157] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:43:40,165] WARNING django.request (241) Not Found: /static/static/img/user002.png
+[2024-04-15 14:43:40,166] WARNING django.server (212) "GET /static/static/img/user002.png HTTP/1.1" 404 179
+[2024-04-15 14:43:40,196] WARNING django.request (241) Not Found: /static/static/img/user003.png
+[2024-04-15 14:43:40,197] WARNING django.request (241) Not Found: /static/static/img/promo001.jpg
+[2024-04-15 14:43:40,198] WARNING django.request (241) Not Found: /static/static/img/promo002.jpg
+[2024-04-15 14:43:40,199] WARNING django.request (241) Not Found: /static/static/img/promo003.jpg
+[2024-04-15 14:43:40,200] WARNING django.server (212) "GET /static/static/img/user003.png HTTP/1.1" 404 179
+[2024-04-15 14:43:40,202] WARNING django.server (212) "GET /static/static/img/promo002.jpg HTTP/1.1" 404 179
+[2024-04-15 14:43:40,202] WARNING django.server (212) "GET /static/static/img/promo001.jpg HTTP/1.1" 404 179
+[2024-04-15 14:43:40,204] WARNING django.server (212) "GET /static/static/img/promo003.jpg HTTP/1.1" 404 179
+[2024-04-15 14:43:42,867] INFO django.server (212) "GET /news/ HTTP/1.1" 200 13170
+[2024-04-15 14:43:42,920] WARNING django.request (241) Not Found: /static/static/css/bootstrap.min.css
+[2024-04-15 14:43:42,923] WARNING django.server (212) "GET /static/static/css/bootstrap.min.css HTTP/1.1" 404 179
+[2024-04-15 14:43:42,932] WARNING django.request (241) Not Found: /static/static/css/Chart.min.css
+[2024-04-15 14:43:42,938] WARNING django.server (212) "GET /static/static/css/Chart.min.css HTTP/1.1" 404 179
+[2024-04-15 14:43:42,950] WARNING django.request (241) Not Found: /static/static/css/fontawesome.all.min.css
+[2024-04-15 14:43:42,952] WARNING django.server (212) "GET /static/static/css/fontawesome.all.min.css HTTP/1.1" 404 179
+[2024-04-15 14:43:42,957] WARNING django.request (241) Not Found: /static/static/img/logo.png
+[2024-04-15 14:43:42,959] WARNING django.server (212) "GET /static/static/img/logo.png HTTP/1.1" 404 179
+[2024-04-15 14:43:42,969] WARNING django.request (241) Not Found: /static/static/js/jquery-3.6.0.min.js
+[2024-04-15 14:43:42,969] WARNING django.server (212) "GET /static/static/js/jquery-3.6.0.min.js HTTP/1.1" 404 179
+[2024-04-15 14:43:43,025] WARNING django.request (241) Not Found: /static/static/js/popper.min.js
+[2024-04-15 14:43:43,031] WARNING django.server (212) "GET /static/static/js/popper.min.js HTTP/1.1" 404 179
+[2024-04-15 14:43:43,038] WARNING django.request (241) Not Found: /static/static/js/bootstrap.min.js
+[2024-04-15 14:43:43,065] WARNING django.request (241) Not Found: /static/static/js/Chart.min.js
+[2024-04-15 14:43:43,069] WARNING django.request (241) Not Found: /static/static/js/fontawesome.all.min.js
+[2024-04-15 14:43:43,078] WARNING django.server (212) "GET /static/static/js/Chart.min.js HTTP/1.1" 404 179
+[2024-04-15 14:43:43,079] WARNING django.server (212) "GET /static/static/js/fontawesome.all.min.js HTTP/1.1" 404 179
+[2024-04-15 14:43:43,082] WARNING django.server (212) "GET /static/static/js/bootstrap.min.js HTTP/1.1" 404 179
