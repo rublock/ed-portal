@@ -4,6 +4,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class News(models.Model):
+    """Модель новости"""
     title = models.CharField(max_length=256, verbose_name="Title")
     preambule = models.CharField(max_length=1024, verbose_name="Preambule")
     body = models.TextField(blank=True, null=True, verbose_name="Body")
@@ -26,11 +27,13 @@ class News(models.Model):
 
 
 class CoursesManager(models.Manager):
+    """Курсы без пометки удаления"""
     def get_queryset(self):
         return super().get_queryset().filter(deleted=False)
 
 
 class Courses(models.Model):
+    """Модель курса"""
     objects = CoursesManager()
 
     name = models.CharField(max_length=256, verbose_name="Name")
@@ -51,6 +54,7 @@ class Courses(models.Model):
 
 
 class CourseFeedback(models.Model):
+    """Модель отзыва о курсе"""
     RATING = ((5, "⭐⭐⭐⭐⭐"), (4, "⭐⭐⭐⭐"), (3, "⭐⭐⭐"), (2, "⭐⭐"), (1, "⭐"))
     course = models.ForeignKey(Courses, on_delete=models.CASCADE, verbose_name=_("Course"))
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, verbose_name=_("User"))
@@ -64,6 +68,7 @@ class CourseFeedback(models.Model):
 
 
 class Lesson(models.Model):
+    """Модель урока"""
     course = models.ForeignKey(Courses, on_delete=models.CASCADE)
     num = models.PositiveIntegerField(verbose_name="Lesson number")
     title = models.CharField(max_length=256, verbose_name="Name")
@@ -87,6 +92,7 @@ class Lesson(models.Model):
 
 
 class CourseTeachers(models.Model):
+    """Модель преподавателя"""
     course = models.ManyToManyField(Courses)
     name_first = models.CharField(max_length=128, verbose_name="Name")
     name_second = models.CharField(max_length=128, verbose_name="Surname")

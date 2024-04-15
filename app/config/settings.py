@@ -100,22 +100,37 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.postgresql',
-       'NAME': os.environ.get('POSTGRES_DB'),
-       'USER': os.environ.get('POSTGRES_USER'),
-       'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-       'HOST': os.environ.get('POSTGRES_HOST'),
-       'PORT': os.environ.get('POSTGRES_PORT'),
-   }
-}
+if DEBUG:
+    STATIC_URL = "/static/"
 
-STATIC_URL = '/static/static/'
-MEDIA_URL = '/static/media/'
+    STATICFILES_DIRS = [
+        BASE_DIR / "static",
+    ]
+else:
+    STATIC_URL = '/static/static/'
+    MEDIA_URL = '/static/media/'
 
-MEDIA_ROOT = '/vol/web/media/'
-STATIC_ROOT = '/vol/web/static/'
+    MEDIA_ROOT = '/vol/web/media/'
+    STATIC_ROOT = '/vol/web/static/'
+
+if DEBUG:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
+else:
+    DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.postgresql',
+           'NAME': os.environ.get('POSTGRES_DB'),
+           'USER': os.environ.get('POSTGRES_USER'),
+           'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+           'HOST': os.environ.get('POSTGRES_HOST'),
+           'PORT': os.environ.get('POSTGRES_PORT'),
+       }
+    }
 
 LANGUAGE_CODE = "en-us"
 LANGUAGES = (
