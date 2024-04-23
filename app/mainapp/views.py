@@ -164,7 +164,7 @@ class LogView(TemplateView):
         log_slice = []
         with open(settings.LOG_FILE, "r") as log_file:
             for i, line in enumerate(log_file):
-                if i == 1000:
+                if i == 1000000:
                     break
                 log_slice.insert(0, line)
             context["log"] = "".join(log_slice)
