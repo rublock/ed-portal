@@ -22,17 +22,17 @@ locust
 ```html
 docker compose -f docker-compose-prod.yml up
 ```
-> главная страница
+* главная страница
 ![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/main_page.PNG)
-> логи
+* логи
 ![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/logs.PNG)
-> личный кабинет
+* личный кабинет
 ![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/profile.PNG)
-> debug toolbar
+* debug toolbar
 ![](https://raw.githubusercontent.com/rublock/ed_portal/main/app/static/img/toolbar.PNG)
-> API
+* API
 ![](https://github.com/rublock/ed_portal/blob/main/app/static/img/api.png)
-> Redoc
+* Redoc
 ![](https://github.com/rublock/ed_portal/blob/main/app/static/img/redoc.png)
-> Swagger
+* Swagger
 ![](https://github.com/rublock/ed_portal/blob/main/app/static/img/swagger.png)
