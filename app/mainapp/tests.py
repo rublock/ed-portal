@@ -1,3 +1,9 @@
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
 from http import HTTPStatus
 
 from django.core import mail as django_mail
@@ -20,7 +26,9 @@ class TestNewsPage(TestCase):
         super().setUp()
         self.client_with_auth = Client()
         self.user_admin = authapp_models.CustomUser.objects.get(username="admin")
-        self.client_with_auth.force_login(self.user_admin, backend="django.contrib.auth.backends.ModelBackend")
+        self.client_with_auth.force_login(
+            self.user_admin, backend="django.contrib.auth.backends.ModelBackend"
+        )
 
     def test_page_open_list(self):
         """Тест страницы списка новостей"""
@@ -115,18 +123,8 @@ class TestTaskMailSend(TestCase):
     def test_mail_send(self):
         """Тест отправки электронного письма"""
         message_text = "test_message_text"
-        user_obj = authapp_models.CustomUser.objects.first()
-        mainapp_tasks.send_feedback_mail(message_text, user_obj.email)
+        mainapp_tasks.send_feedback_mail(message_text)
         self.assertEqual(django_mail.outbox[0].body, message_text)
-
-
-from django.conf import settings
-from django.contrib.staticfiles.testing import StaticLiveServerTestCase
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.webdriver import WebDriver
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
 
 
 class TestNewsSelenium(StaticLiveServerTestCase):
@@ -150,7 +148,9 @@ class TestNewsSelenium(StaticLiveServerTestCase):
         self.selenium.find_element(By.ID, "id_username").send_keys("admin")
         self.selenium.find_element(By.ID, "id_password").send_keys("admin")
         self.selenium.find_element(By.CLASS_NAME, "loginButton").click()
-        WebDriverWait(self.selenium, 5).until(EC.visibility_of_element_located((By.CLASS_NAME, "mt-auto")))
+        WebDriverWait(self.selenium, 5).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, "mt-auto"))
+        )
 
     def test_create_button_clickable(self):
         """Тест кнопки создания новости"""
@@ -162,14 +162,18 @@ class TestNewsSelenium(StaticLiveServerTestCase):
         )
         print("Trying to click button ...")
         button_create.click()  # Test that button clickable
-        WebDriverWait(self.selenium, 5).until(EC.visibility_of_element_located((By.ID, "id_title")))
+        WebDriverWait(self.selenium, 5).until(
+            EC.visibility_of_element_located((By.ID, "id_title"))
+        )
         print("Button clickable!")
 
     def test_pick_color(self):
         """Тест цвета хедера, если не соответствует делем скриншот"""
         path = f"{self.live_server_url}{reverse('mainapp:main_page')}"
         self.selenium.get(path)
-        navbar_el = WebDriverWait(self.selenium, 5).until(EC.visibility_of_element_located((By.CLASS_NAME, "navbar")))
+        navbar_el = WebDriverWait(self.selenium, 5).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, "navbar"))
+        )
         try:
             self.assertEqual(
                 navbar_el.value_of_css_property("background-color"),
