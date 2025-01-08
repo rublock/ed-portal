@@ -111,11 +111,17 @@ DATABASES = {
    }
 }
 
-STATIC_URL = '/static/static/'
-MEDIA_URL = '/static/media/'
-
-MEDIA_ROOT = '/vol/web/media/'
-STATIC_ROOT = '/vol/web/static/'
+if DEBUG:
+    STATIC_URL = '/static/static/'
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, 'static')
+    ]
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+else:
+    STATIC_URL = '/static/static/'
+    MEDIA_URL = '/static/media/'
+    MEDIA_ROOT = '/vol/web/media/'
+    STATIC_ROOT = '/vol/web/static/'
 
 LANGUAGE_CODE = "en-us"
 LANGUAGES = (
