@@ -171,9 +171,11 @@ LOGGING = {
     "handlers": {
         "file": {
             "level": "DEBUG",
-            "class": "logging.FileHandler",
+            "class": "logging.handlers.TimedRotatingFileHandler",
             "filename": LOG_FILE,
             "formatter": "console",
+            "when": "midnight",
+            "backupCount": 7,
         },
         "console": {"class": "logging.StreamHandler", "formatter": "console"},
     },
