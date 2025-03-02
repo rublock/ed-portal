@@ -6,6 +6,19 @@
 `Python 3.10` `Django 4.2.7` `DRF` `Swagger` `Redoc` `PostgreSQL 14` `Celery` `Redis` `Django TestCase` `Selenium` 
 `locust` `Docker` `Nginx` `UWSGI`
 
+* запуск без контейнера для тестов
+```commandline
+pip install -r requirements.txt
+```
+```commandline
+python manage.py migrate
+```
+```commandline
+python manage.py loaddata 001_news 002_courses 003_lessons ./mainapp/fixtures/004_teachers.json
+```
+```commandline
+python manage.py runserver
+```
 * тестирование
 ```angular2html
 python manage.py test
